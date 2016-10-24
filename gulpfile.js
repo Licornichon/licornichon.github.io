@@ -39,7 +39,7 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.js', uglify()))
     // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('dist'))
 });
 
 gulp.task('images', function(){
@@ -48,15 +48,15 @@ gulp.task('images', function(){
       // Setting interlaced to true
       interlaced: true
     }))
-  .pipe(gulp.dest('./images'))
+  .pipe(gulp.dest('./dist/images'))
 });
 
-gulp.task('clean:assets', function() {
-  return del.sync('assets');
+gulp.task('clean:dist', function() {
+  return del.sync('dist');
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:assets', 
+  runSequence('clean:dist', 
     ['sass', 'useref', 'images'],
     callback
   )

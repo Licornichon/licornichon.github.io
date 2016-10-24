@@ -74,9 +74,33 @@ h3, .h3 {
 p {
   margin-bottom: .5em; }
 
-a.link {
+.link {
+  position: relative;
   text-decoration: none;
   color: inherit; }
+  .link::before, .link::after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 1em);
+    width: calc(100% + 1em);
+    max-width: 0%;
+    max-height: 0%;
+    transition: max-height .2s ease-out, max-width .2s .2s ease-out, border-color .2s .2s; }
+  .link::before {
+    top: -.5em;
+    left: -.5em;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent; }
+  .link::after {
+    bottom: -.5em;
+    right: -.5em;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent; }
+  .link:hover::before, .link:hover::after {
+    max-width: calc(100% + 1em);
+    max-height: 100%;
+    border-color: #2a4d69;
+    transition: max-width .2s ease-out, max-height .2s .2s ease-out, border-color .2s; }
 
 .creamColor {
   color: #fff4e6; }
@@ -112,7 +136,7 @@ header {
   text-transform: uppercase; }
   .navbar li {
     display: inline-block;
-    padding: 0 .5em; }
+    padding: 0 1em; }
 
 #heroSection {
   flex-direction: column;
@@ -146,6 +170,9 @@ header {
 
 #portfolio .novagray {
   background-color: #0098ff; }
+
+#portfolio .inser {
+  background-color: #141414; }
 
 #portfolio .caseLogo {
   position: absolute;
@@ -187,10 +214,40 @@ header {
 #portfolio .techs {
   margin-bottom: 0; }
 
+#portfolio #short {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; }
+  #portfolio #short .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%; }
+  #portfolio #short .shortDiv {
+    width: 33.33333%;
+    display: inline-block;
+    margin-left: -.5rem;
+    margin-right: -.5rem; }
+  #portfolio #short .counter {
+    position: relative;
+    font-size: 5em;
+    padding: 1rem; }
+    #portfolio #short .counter img {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%; }
+
 footer {
   background: #1b3245;
   color: #fff4e6;
-  font-size: .8em;
+  font-size: .6em;
   padding-bottom: 1em;
   padding-top: 2em;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px inset; }

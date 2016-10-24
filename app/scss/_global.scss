@@ -35,9 +35,46 @@ p{
 	margin-bottom: .5em;
 }
 
-a.link{
+.link{
+	position: relative;
 	text-decoration: none;
 	color: inherit;
+
+	&::before,
+	&::after{
+		content: '';
+		position: absolute;
+		height: calc(100% + 1em);
+		width: calc(100% + 1em);
+		max-width: 0%;
+		max-height: 0%;
+		transition: max-height .2s ease-out,
+					max-width .2s .2s ease-out,
+					border-color .2s .2s;
+	}
+
+	&::before{
+		top: -.5em;
+		left: -.5em;
+		border-top: 2px solid transparent;
+		border-right: 2px solid transparent;
+	}
+	&::after{
+		bottom: -.5em;
+		right: -.5em;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+	}
+
+	&:hover::before,
+	&:hover::after{
+		max-width: calc(100% + 1em);
+		max-height: 100%;
+		border-color: $text-color;
+		transition: max-width .2s ease-out,
+					max-height .2s .2s ease-out,
+					border-color .2s;
+	}
 }
 
 .creamColor{
