@@ -1,0 +1,12 @@
+@import "_colors";
+
+#heroSection{
+	flex-direction: column;
+	height: 100vh;
+	background-color: $dark_blue;
+	background-image: url('../images/unicorn.svg');
+	background-size: auto 75%;
+	background-position: -10px 101%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}

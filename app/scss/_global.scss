@@ -1,0 +1,57 @@
+@import "_colors";
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-size: calc(18px + (22 - 18) * (100vw - 960px) / (1920 - 960));
+	font-weight: 300;
+	color: rgba($text_color, .9);
+	max-width: 1920px;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+h1, .h1{
+	font-size: 4em;
+	font-weight: 700;
+	color: $text_color;
+}
+
+h2, .h2{
+	font-size: 2em;
+}
+
+h3, .h3{
+	font-size: 1.5em;
+}
+
+p{
+	margin-bottom: .5em;
+}
+
+a.link{
+	text-decoration: none;
+	color: inherit;
+}
+
+.creamColor{
+	color: $cream;
+}
+
+.container{
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
