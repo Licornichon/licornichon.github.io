@@ -7,6 +7,7 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var del = require('del');
 var runSequence = require('run-sequence');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/styles.scss') // Gets all files ending with .scss in app/scss
@@ -38,16 +39,25 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.js', uglify()))
     // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('.'))
 });
 
-gulp.task('clean:dist', function() {
-  return del.sync('dist');
+gulp.task('images', function(){
+  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  .pipe(imagemin({
+      // Setting interlaced to true
+      interlaced: true
+    }))
+  .pipe(gulp.dest('./images'))
+});
+
+gulp.task('clean:assets', function() {
+  return del.sync('assets');
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 
-    ['sass', 'useref'],
+  runSequence('clean:assets', 
+    ['sass', 'useref', 'images'],
     callback
   )
 })
