@@ -1,9 +1,9 @@
 @import "_colors";
 
 #myself{
-	display: inherit;
-	padding-top: 5em;
 	padding-bottom: 1.5em;
-	background: $light_blue;
-	text-align: center;
+	
+	p:last-of-type{
+		margin-top: 5em;
+	}
 }

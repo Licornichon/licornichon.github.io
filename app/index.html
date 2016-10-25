@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header class="header creamColor">
-		<nav class="navbar container">
+		<nav id="nav" class="navbar container">
 			<ul>
 				<li>
 					<a class="link" href="#myself">
@@ -41,9 +41,11 @@
 		</h2>
 	</section>
 
-	<section id="myself">
+	<section id="myself" class="classicSection">
 		<div class="container">
 			<h2>A short introduction</h2>
+			<p>Fresh out of school, I'm looking to sharpen my skills and broaden my field.</p>
+			<p>This last year, I worked as a front-end developer at Slidor, a design agency. Now I'm in the wild and looking for some new opportunities.</p>
 			<p>All the following projects have been realized while working for Slidor.</p>
 		</div>
 	</section>
@@ -51,53 +53,68 @@
 	<section id="portfolio">
 		<figure class="case slidor">
 			<img class="caseLogo" src="images/slidor.svg">
-			<a target="_blank" href="http://www.slidor.fr">
-				<figcaption class="details">
-					<h3 class="link">Slidor</h3>
-					<p>Website</p>
-					<p class="techs">HTML5, SCSS, jQuery, ASP.net</p>
-				</figcaption>
-			</a>
+			<figcaption class="details">
+				<h3>
+				<a class="link" target="_blank" href="http://www.slidor.fr">
+				<span class="lowercase">See more of </span>
+				Slidor
+				</a>
+				</h3>
+				<p>Website</p>
+				<p class="techs">HTML5, SCSS, jQuery, ASP.net</p>
+			</figcaption>
 		</figure>
 		<figure class="case krl">
 			<img class="caseLogo" src="images/krl.png">
-			<a target="_blank" href="http://www.krlventures.com/">
-				<figcaption class="details">
-					<h3 class="link">Kerala Ventures</h3>
-					<p>Website</p>
-					<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
-				</figcaption>
-			</a>
+			<figcaption class="details">
+				<h3>
+					<a class="link" target="_blank" href="http://www.krlventures.com/"><span class="lowercase">See more of </span>
+					Kerala Ventures
+					</a>
+				</h3>
+				<p>Website</p>
+				<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
+			</figcaption>
 		</figure>
 		<figure class="case divn">
 			<img class="caseLogo" src="images/divn.png">
-			<a target="_blank" href="http://www.divn.fr/">
-				<figcaption class="details">
-					<h3 class="link">DIVN by PwC</h3>
-					<p>Website</p>
-					<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
-				</figcaption>
-			</a>
+			<figcaption class="details">
+				<h3>
+					<a class="link" target="_blank" href="http://www.divn.fr/">
+					<span class="lowercase">See more of </span>
+					DIVN 
+					<span class="lowercase">by PwC</span>
+					</a>
+				</h3>
+				<p>Website</p>
+				<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
+			</figcaption>
 		</figure>
 		<figure class="case novagray">
 			<img class="caseLogo" src="images/novagray.png">
-			<a target="_blank" href="http://www.nova-gray.com/">
-				<figcaption class="details">
-					<h3 class="link">Nova-Gray</h3>
-					<p>Website</p>
-					<p class="techs">HTML5, SCSS, Javascript, Webflow</p>
-				</figcaption>
-			</a>
+			<figcaption class="details">
+				<h3>
+					<a class="link" target="_blank" href="http://www.nova-gray.com/">
+					<span class="lowercase">See more of </span>
+					Nova-Gray
+					</a>
+				</h3>
+				<p>Website</p>
+				<p class="techs">HTML5, SCSS, Javascript, Webflow</p>
+			</figcaption>
 		</figure>
 		<figure class="case inser">
 			<img class="caseLogo" src="images/inser.png">
-			<a target="_blank" href="http://www.inser.io/">
-				<figcaption class="details">
-					<h3 class="link">Inser</h3>
-					<p>Web app, Microsoft PowerPoint Plugin</p>
-					<p class="techs">HTML5, SCSS</p>
-				</figcaption>
-			</a>
+			<figcaption class="details">
+				<h3>
+					<a class="link" target="_blank" href="http://www.inser.io/">
+					<span class="lowercase">See more of </span>
+					Inser
+					</a>
+				</h3>
+				<p>Web app, Microsoft PowerPoint Plugin</p>
+				<p class="techs">HTML5, SCSS</p>
+			</figcaption>
 		</figure>
 		<figure id="short" class="case">
 			<h3>In short</h3>
@@ -121,14 +138,21 @@
 						<img id="rainbow" src="images/rainbow.svg">
 						1
 					</h3>
-					<h3>placeholding rainbow</h3>
+					<h3>cheerful rainbow</h3>
 				</div>
 			</div>
 		</figure>
 	</section>
 
-	<section id="contact">
-		
+	<section id="contact" class="classicSection">
+		<div class="container">
+			<h2>You want to contact me ?</h2>
+			<p>
+				Feel free to shoot me a message on my
+				<a class="link" target="_blank" href="https://fr.linkedin.com/in/antoine-payet-0013aa98">Linkedin</a>
+				account.
+			</p>
+		</div>
 	</section>
 
 	<footer>

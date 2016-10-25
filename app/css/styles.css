@@ -49,24 +49,28 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-size: calc(18px + (22 - 18) * (100vw - 960px) / (1920 - 960));
+  line-height: 1.4em;
   font-weight: 300;
-  color: rgba(42, 77, 105, 0.9);
+  color: #2a4d69;
   max-width: 1920px; }
 
 h1, h2, h3,
 .h1, .h2, .h3 {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
+  line-height: 1.2em;
   text-transform: uppercase;
   margin-bottom: 1rem; }
 
 h1, .h1 {
   font-size: 4em;
   font-weight: 700;
+  letter-spacing: .1em;
   color: #2a4d69; }
 
 h2, .h2 {
-  font-size: 2em; }
+  font-size: 2em;
+  letter-spacing: .05em; }
 
 h3, .h3 {
   font-size: 1.5em; }
@@ -85,7 +89,7 @@ p {
     width: calc(100% + 1em);
     max-width: 0%;
     max-height: 0%;
-    transition: max-height .2s ease-out, max-width .2s .2s ease-out, border-color .2s .2s; }
+    transition: max-height .2s ease-out, max-width .2s .2s ease-out, border-color .25s .2s; }
   .link::before {
     top: -.5em;
     left: -.5em;
@@ -105,6 +109,9 @@ p {
 .creamColor {
   color: #fff4e6; }
 
+.lowercase {
+  text-transform: none; }
+
 .container {
   max-width: 90%;
   margin: 0 auto; }
@@ -114,6 +121,15 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.classicSection {
+  display: inherit;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background: #e7eff6;
+  text-align: center; }
+  .classicSection .container {
+    width: 960px; }
 
 header {
   z-index: 5;
@@ -133,6 +149,7 @@ header {
   padding: 1em 0;
   font-size: .8em;
   font-weight: 400;
+  letter-spacing: .05em;
   text-transform: uppercase; }
   .navbar li {
     display: inline-block;
@@ -149,100 +166,101 @@ header {
   background-attachment: fixed; }
 
 #myself {
-  display: inherit;
-  padding-top: 5em;
-  padding-bottom: 1.5em;
-  background: #e7eff6;
-  text-align: center; }
+  padding-bottom: 1.5em; }
+  #myself p:last-of-type {
+    margin-top: 5em; }
 
-#portfolio .case {
-  position: relative;
-  width: 50%;
-  height: 400px;
-  overflow: hidden; }
-
-#portfolio .slidor {
-  background-color: #120d21; }
-
-#portfolio .krl,
-#portfolio .divn {
-  background-color: white; }
-
-#portfolio .novagray {
-  background-color: #0098ff; }
-
-#portfolio .inser {
-  background-color: #141414; }
-
-#portfolio .caseLogo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 300px;
-  max-height: 100%;
-  transition: max-width .4s, top .4s; }
-
-#portfolio .details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  text-align: center;
-  color: #fff4e6;
-  background-color: #2a4d69;
-  box-shadow: transparent 0 0 50px;
-  transform: translateY(100%);
-  transition: .3s ease-out; }
-
-#portfolio .case:hover .details {
-  transform: translateY(0%);
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px; }
-
-#portfolio .case:hover .caseLogo {
-  max-width: 350px;
-  top: 25%; }
-
-#portfolio .case.inser .caseLogo {
-  max-width: 200px; }
-
-#portfolio .case.inser:hover .caseLogo {
-  max-width: 230px; }
-
-#portfolio .techs {
-  margin-bottom: 0; }
-
-#portfolio #short {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  text-align: center; }
-  #portfolio #short .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%; }
-  #portfolio #short .shortDiv {
-    width: 33.33333%;
-    display: inline-block;
-    margin-left: -.5rem;
-    margin-right: -.5rem; }
-  #portfolio #short .counter {
+#portfolio {
+  background-color: #fff4e6; }
+  #portfolio .case {
     position: relative;
-    font-size: 5em;
-    padding: 1rem; }
-    #portfolio #short .counter img {
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%; }
+    width: 50%;
+    height: 400px;
+    overflow: hidden; }
+  #portfolio .slidor {
+    background-color: #120d21; }
+  #portfolio .krl,
+  #portfolio .divn {
+    background-color: white; }
+  #portfolio .novagray {
+    background-color: #0098ff; }
+  #portfolio .inser {
+    background-color: #141414; }
+  #portfolio .caseLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    max-height: 100%;
+    transition: max-width .4s, top .4s; }
+  #portfolio .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    color: #fff4e6;
+    background-color: #2a4d69;
+    box-shadow: transparent 0 0 25px;
+    transform: translateY(100%);
+    transition: .3s ease-out; }
+    #portfolio .details h3 {
+      display: inline-block;
+      color: #e7eff6; }
+      #portfolio .details h3 .link:hover::before,
+      #portfolio .details h3 .link:hover::after {
+        border-color: #4b86b4; }
+  #portfolio .case:hover .details {
+    transform: translateY(0%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 25px; }
+  #portfolio .case:hover .caseLogo {
+    /*max-width: 350px;*/
+    top: 25%; }
+  #portfolio .case.inser .caseLogo {
+    max-width: 200px; }
+  #portfolio .case.inser:hover .caseLogo {
+    /*max-width: 230px;*/ }
+  #portfolio .techs {
+    margin-bottom: 0; }
+  #portfolio #short {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; }
+    #portfolio #short .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 90%; }
+    #portfolio #short .shortDiv {
+      width: 33.33333%;
+      display: inline-block;
+      margin-left: -.5rem;
+      margin-right: -.5rem; }
+    #portfolio #short .counter {
+      z-index: 2;
+      position: relative;
+      font-size: 5em;
+      padding-top: 1rem;
+      padding-bottom: 1rem; }
+      #portfolio #short .counter img {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%; }
+  #portfolio #rainbow {
+    opacity: .8; }
+
+#contact .link {
+  font-weight: 400; }
 
 footer {
   background: #1b3245;

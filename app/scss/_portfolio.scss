@@ -1,6 +1,8 @@
 @import "_colors";
 
 #portfolio{
+	background-color: $cream;
+
 	.case{
 		position: relative;
 		width: 50%;
@@ -46,20 +48,30 @@
 		text-align: center;
 		color: $cream;
 		background-color: $text_color;
-		box-shadow: rgba(black, 0) 0 0 50px;
+		box-shadow: rgba(black, 0) 0 0 25px;
 
 		transform: translateY(100%);
 		transition: .3s ease-out;
+
+		h3{
+			display: inline-block;
+			color: $light_blue;
+
+			.link:hover::before,
+			.link:hover::after{
+				border-color: $dark_blue;
+			}
+		}
 	}
 
 	.case:hover{
 		.details{
 			transform: translateY(0%);
-			box-shadow: rgba(black, .5) 0 0 50px;
+			box-shadow: rgba(black, .3) 0 0 25px;
 		}
 
 		.caseLogo{
-			max-width: 350px;
+			/*max-width: 350px;*/
 			top: 25%;
 		}
 	}
@@ -68,9 +80,9 @@
 		.caseLogo{
 			max-width: 200px;
 		}
-
+		
 		&:hover .caseLogo{
-			max-width: 230px;
+			/*max-width: 230px;*/
 		}
 	}
 
@@ -80,7 +92,7 @@
 
 	#short{
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		text-align: center;
@@ -100,9 +112,11 @@
 		}
 
 		.counter{
+			z-index: 2;
 			position: relative;
 			font-size: 5em;
-			padding: 1rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
 
 			img{
 				z-index: -1;
@@ -116,5 +130,9 @@
 			}
 		}
 
+	}
+
+	#rainbow{
+		opacity: .8;
 	}
 }
