@@ -1,4 +1,4 @@
-$('a[href^="#"]').click(function(){
+$('nav a[href^="#"]').click(function(){
 	var the_id = $(this).attr("href");
 
 	$('html, body').animate({
