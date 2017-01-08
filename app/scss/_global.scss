@@ -83,6 +83,10 @@ p{
 	}
 }
 
+p .link{
+	color: $dark_blue;
+}
+
 .creamColor{
 	color: $cream;
 }
@@ -91,15 +95,21 @@ p{
 }
 
 .container{
-	max-width: 90%;
+	width: 90%;
 	margin: 0 auto;
 }
 
 section{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	@media($lg){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.container{
+		max-width: 960px;
+	}
 }
 
 .classicSection{
@@ -108,8 +118,4 @@ section{
 	padding-bottom: 5em;
 	background: $light_blue;
 	text-align: center;
-
-	.container{
-		max-width: 960px;
-	}
 }

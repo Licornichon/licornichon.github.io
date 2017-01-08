@@ -8,10 +8,12 @@ header{
 	width: 100vw;
 
 	transition: background-color .2s ease-out,
+				box-shadow .2s ease-out,
 				color .2s ease-out;
 
 	&.opaque{
-		background-color: rgba($middle_blue, .9);
+		background-color: rgba($text_color, .85);
+		box-shadow: 0 0 1em rgba($text_color, .5);
 	}
 }
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Antoine Payet</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:40,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" href="dist/css/styles.min.css">
 </head>
 <body>
 	<header class="header creamColor">
@@ -29,14 +29,16 @@
 		</nav>
 	</header>
 	<section id="heroSection">
-		<h1 class="me">
-			<span class="creamColor">Antoine </span>
-			Payet
-		</h1>
-		<h2>
-			Front-end 
-			<span class="creamColor">developer</span>
-		</h2>
+		<div class="container">
+			<h1 class="me">
+				<span class="creamColor">Antoine </span>
+				Payet
+			</h1>
+			<h2>
+				Front-end 
+				<span class="creamColor">developer</span>
+			</h2>
+		</div>
 	</section>
 
 	<section id="myself" class="classicSection">
@@ -50,68 +52,78 @@
 
 	<section id="portfolio">
 		<figure class="case slidor">
-			<img class="caseLogo" src="images/slidor.svg">
+			<img class="caseLogo" src="dist/images/slidor.svg">
 			<figcaption class="details">
-				<h3>
-				<a class="link" target="_blank" href="http://www.slidor.fr">
-				<span class="lowercase">See more of </span>
-				Slidor
-				</a>
-				</h3>
-				<p>Website</p>
-				<p class="techs">HTML5, SCSS, jQuery, ASP.net</p>
+				<div class="container">
+					<h3>
+						<a class="link" target="_blank" href="http://www.slidor.fr">
+							<span class="lowercase">See more of </span>
+							Slidor
+						</a>
+					</h3>
+					<p>Website</p>
+					<p class="techs">HTML5, SCSS, jQuery, ASP.net</p>
+				</div>
 			</figcaption>
 		</figure>
 		<figure class="case krl">
-			<img class="caseLogo" src="images/krl.png">
+			<img class="caseLogo" src="dist/images/krl.png">
 			<figcaption class="details">
-				<h3>
-					<a class="link" target="_blank" href="http://www.krlventures.com/"><span class="lowercase">See more of </span>
-					Kerala Ventures
-					</a>
-				</h3>
-				<p>Website</p>
-				<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
+				<div class="container">
+					<h3>
+						<a class="link" target="_blank" href="http://www.krlventures.com/"><span class="lowercase">See more of </span>
+							Kerala Ventures
+						</a>
+					</h3>
+					<p>Website</p>
+					<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
+				</div>
 			</figcaption>
 		</figure>
 		<figure class="case divn">
-			<img class="caseLogo" src="images/divn.png">
+			<img class="caseLogo" src="dist/images/divn.png">
 			<figcaption class="details">
-				<h3>
-					<a class="link" target="_blank" href="http://www.divn.fr/">
-					<span class="lowercase">See more of </span>
-					DIVN 
-					<span class="lowercase">by PwC</span>
-					</a>
-				</h3>
-				<p>Website</p>
-				<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
+				<div class="container">
+					<h3>
+						<a class="link" target="_blank" href="http://www.divn.fr/">
+							<span class="lowercase">See more of </span>
+							DIVN 
+							<span class="lowercase">by PwC</span>
+						</a>
+					</h3>
+					<p>Website</p>
+					<p class="techs">HTML5, SCSS, jQuery, Webflow</p>
+				</div>
 			</figcaption>
 		</figure>
 		<figure class="case novagray">
-			<img class="caseLogo" src="images/novagray.png">
+			<img class="caseLogo" src="dist/images/novagray.png">
 			<figcaption class="details">
-				<h3>
-					<a class="link" target="_blank" href="http://www.nova-gray.com/">
-					<span class="lowercase">See more of </span>
-					Nova-Gray
-					</a>
-				</h3>
-				<p>Website</p>
-				<p class="techs">HTML5, SCSS, Javascript, Webflow</p>
+				<div class="container">
+					<h3>
+						<a class="link" target="_blank" href="http://www.nova-gray.com/">
+							<span class="lowercase">See more of </span>
+							Nova-Gray
+						</a>
+					</h3>
+					<p>Website</p>
+					<p class="techs">HTML5, SCSS, Javascript, Webflow</p>
+				</div>
 			</figcaption>
 		</figure>
 		<figure class="case inser">
-			<img class="caseLogo" src="images/inser.png">
+			<img class="caseLogo" src="dist/images/inser.png">
 			<figcaption class="details">
-				<h3>
-					<a class="link" target="_blank" href="http://www.inser.io/">
-					<span class="lowercase">See more of </span>
-					Inser
-					</a>
-				</h3>
-				<p>Web app, Microsoft PowerPoint Plugin</p>
-				<p class="techs">HTML5, SCSS</p>
+				<div class="container">
+					<h3>
+						<a class="link" target="_blank" href="http://www.inser.io/">
+							<span class="lowercase">See more of </span>
+							Inser
+						</a>
+					</h3>
+					<p>Web app, Microsoft PowerPoint Plugin</p>
+					<p class="techs">HTML5, SCSS</p>
+				</div>
 			</figcaption>
 		</figure>
 		<figure id="short" class="case">
@@ -119,21 +131,21 @@
 			<div class="container">
 				<div class="shortDiv">
 					<h3 class="counter">
-						<img id="projects" src="images/project.svg">
+						<img id="projects" src="dist/images/project.svg">
 						10
 					</h3>
 					<h3>projects</h3>
 				</div>
 				<div class="shortDiv">
 					<h3 class="counter">
-						<img id="awwward" src="images/cup.svg">
+						<img id="awwward" src="dist/images/cup.svg">
 						1
 					</h3>
 					<h3>Awwward</h3>
 				</div>
 				<div class="shortDiv">
 					<h3 class="counter">
-						<img id="rainbow" src="images/rainbow.svg">
+						<img id="rainbow" src="dist/images/rainbow.svg">
 						1
 					</h3>
 					<h3>cheerful rainbow</h3>
@@ -152,7 +164,9 @@
 			</p>
 			<p>
 				You can also check what I do when I'm bored on 
-				<a class="link" target="_blank" href="https://www.codepen.io/licornichon">Codepen</a>.
+				<a class="link" target="_blank" href="https://www.codepen.io/licornichon">Codepen</a>
+				or
+				<a class="link" target="_blank" href="https://github.com/Licornichon/">Github</a>.
 			</p>
 		</div>
 	</section>
@@ -165,6 +179,6 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<script src="dist/js/main.min.js"></script>
 </body>
 </html>

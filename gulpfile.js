@@ -27,11 +27,11 @@ gulp.task('sass', function() {
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
     .pipe(prefix())
-	.pipe(gulp.dest('./css'))
-	.pipe(browserSync.reload({
-	stream: true
-  }))
-	});
+  	.pipe(gulp.dest('app/css'))
+  	.pipe(browserSync.reload({
+  	stream: true
+    }))
+  });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
 	gulp.watch('app/scss/**/*.scss', ['sass']); 
@@ -54,7 +54,7 @@ gulp.task('useref', function(){
   .pipe(gulpIf('*.js', uglify()))
     // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('dist'))
   });
 
 gulp.task('images', function(){
@@ -63,7 +63,7 @@ gulp.task('images', function(){
       // Setting interlaced to true
       interlaced: true
     }))
-  .pipe(gulp.dest('./images'))
+  .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('build', function (callback) {
