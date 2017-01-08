@@ -60,7 +60,7 @@ h1, h2, h3,
   font-weight: 400;
   line-height: 1.2em;
   text-transform: uppercase;
-  margin-bottom: 1rem; }
+  margin-bottom: 1em; }
 
 h1, .h1 {
   font-size: 4em;
@@ -161,9 +161,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -176,6 +176,11 @@ header {
   .navbar li {
     display: inline-block;
     padding: 0 1em; }
+  @media (min-width: 768px) {
+    .navbar {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
 
 #heroSection {
   height: 100vh;
@@ -200,15 +205,15 @@ header {
   padding-bottom: 1.5em; }
   #myself p:last-of-type {
     margin-top: 3em; }
-    @media (min-width: 798px) {
+    @media (min-width: 992px) {
       #myself p:last-of-type {
         margin-top: 5em; } }
 
 #portfolio {
   background-color: #fff4e6; }
   #portfolio .case {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
     position: relative;
     text-align: center;
     border-top: solid 1px rgba(42, 77, 105, 0.25); }
@@ -241,7 +246,7 @@ header {
     background-color: #141414; }
   #portfolio .caseLogo {
     max-width: 300px;
-    margin: 0 auto 2em auto; }
+    margin: 0 auto 4em auto; }
     @media (min-width: 992px) {
       #portfolio .caseLogo {
         position: absolute;
@@ -285,8 +290,6 @@ header {
       top: 25%; } }
   #portfolio .case.inser .caseLogo {
     max-width: 200px; }
-  #portfolio .case.inser:hover .caseLogo {
-    /*max-width: 230px;*/ }
   #portfolio .techs {
     margin-bottom: 0; }
   #portfolio #short {
@@ -320,12 +323,15 @@ header {
       display: inline-block;
       margin-left: -.5rem;
       margin-right: -.5rem; }
+      #portfolio #short .shortDiv h3 {
+        margin-bottom: 0; }
     #portfolio #short .counter {
       z-index: 2;
       position: relative;
       font-size: 5em;
       padding-top: 1rem;
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      margin-bottom: 20px; }
       #portfolio #short .counter img {
         z-index: -1;
         position: absolute;

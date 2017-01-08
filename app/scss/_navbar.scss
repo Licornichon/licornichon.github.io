@@ -19,7 +19,7 @@ header{
 
 .navbar{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	height: 2em;
 	padding: 1em 0;
@@ -31,5 +31,9 @@ header{
 	li{
 		display: inline-block;
 		padding: 0 1em;
+	}
+
+	@media (min-width: $md){
+		justify-content: flex-end;
 	}
 }

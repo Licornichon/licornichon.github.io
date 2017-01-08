@@ -6,7 +6,7 @@
 	p:last-of-type{
 		margin-top: 3em;
 
-		@media($md){
+		@media (min-width: $lg){
 			margin-top: 5em;
 		}
 	}

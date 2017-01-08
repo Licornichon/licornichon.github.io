@@ -16,7 +16,7 @@ h1, h2, h3,
 	font-weight: 400;
 	line-height: 1.2em;
 	text-transform: uppercase;
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 }
 
 h1, .h1{
@@ -100,7 +100,7 @@ p .link{
 }
 
 section{
-	@media($lg){
+	@media (min-width: $lg){
 		display: flex;
 		justify-content: center;
 		align-items: center;
