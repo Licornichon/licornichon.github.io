@@ -1,82 +1,81 @@
-var path = require('path')
-var webpack = require('webpack')
+const webpack = require('webpack'),
+path = require('path'),
+CleanWebpackPlugin = require('clean-webpack-plugin');
 
-module.exports = {
-  entry: './src/js/main.js',
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const src = path.join(__dirname, 'src');
+
+const config = {
+  devServer: {
+    hot: true,
+    inline: true,
+    // static files served from here
+    contentBase: path.resolve(__dirname, "./src/"),
+    // open app in localhost:3000
+    port: 3000,
+    stats: 'errors-only',
+    open: true
+  },
+  stats: {
+    assets: false,
+    colors: true,
+    version: false,
+    hash: true,
+    timings: true,
+    chunks: false,
+    chunkModules: false
+  },
+  entry: {
+    index: path.join(src, 'index.pug'),
+    bundle: path.join(src, 'js/main.js'),
+  },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
   },
   module: {
     rules: [
     {
-      test: /\.css$/,
-      use: [
-      'vue-style-loader',
-      'css-loader'
-      ],
+      test: /\.pug$/,
+      use:  ['html-loader', 'pug-html-loader?pretty&exports=false']
     },
     {
       test: /\.scss$/,
-      use: [
-      'vue-style-loader',
-      'css-loader',
-      'sass-loader'
-      ],
+      use: ['style-loader', 'css-loader', 'sass-loader'],
     },
     {
-      test: /\.sass$/,
-      use: [
-      'vue-style-loader',
-      'css-loader',
-      'sass-loader?indentedSyntax'
-      ],
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
     },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+      // file-loader(for images)
+      { 
+        test: /\.(jpg|jpeg|png|gif|svg)$/, 
+        use: [ 
+        { 
+          loader: 'file-loader', 
+          options: { 
+            name: '[name].[ext]', 
+            outputPath: './assets/media/' 
+          } 
+        } 
+        ] 
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
+      // file-loader(for fonts)
+      { 
+        test: /\.(woff|woff2|eot|ttf|otf)$/, 
+        use: ['file-loader'] 
       }
       ]
     },
-    resolve: {
-      extensions: ['*', '.js', '.json']
-    },
-    devServer: {
-      historyApiFallback: true,
-      noInfo: true,
-      overlay: true
-    },
-    performance: {
-      hints: false
-    },
-    devtool: '#eval-source-map'
-  }
+    plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'index.html',
+      template: path.join(src, 'index.pug'),
+    }),
+    ],
+  };
 
-  if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-    ])
-}
+  module.exports = config;

@@ -1,0 +1,23 @@
+.experience {
+	display: flex;
+
+	&__title {
+		margin: 2rem 0 4rem;
+	}
+
+	&__focus {
+		&::after {
+			background-color: $textColor;
+			content: '';
+			display: block;
+			height: 4px;
+			margin-top: .5rem;
+			width: 2rem;
+		}
+	}
+
+	&__desc {
+		color: $grey;
+		max-width: 35rem;
+	}
+}

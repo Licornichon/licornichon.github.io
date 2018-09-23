@@ -1,121 +1,32 @@
-@import "_colors";
+* {
+	box-sizing: border-box;
+}
 
 body{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	font-size: calc(18px + (22 - 18) * (100vw - 960px) / (1920 - 960));
-	line-height: 1.4em;
-	font-weight: 300;
-	color: $text_color;
-	max-width: 1920px;
+	color: $textColor;
+	font-family: $fontText;
+	font-size: $fontSize;
+	font-weight: 400;
+	height: 100vh;
+	max-width: $uxl;
+	line-height: $blh;
 }
 
 h1, h2, h3,
 .h1, .h2, .h3{
-	font-family: 'Oswald', sans-serif;
-	font-weight: 400;
-	line-height: 1.2em;
-	text-transform: uppercase;
-	margin-bottom: 1em;
-}
-
-h1, .h1{
-	font-size: 4em;
+	font-family: $fontTitle;
 	font-weight: 700;
-	letter-spacing: .1em;
-	color: $text_color;
+	line-height: 1.2;
 }
 
 h2, .h2{
-	font-size: 2em;
-	letter-spacing: .05em;
+	font-size: $h2;
 }
 
 h3, .h3{
-	font-size: 1.5em;
+	font-size: $h3;
 }
 
-p{
-	margin-bottom: .5em;
-}
-
-.link{
-	position: relative;
-	text-decoration: none;
-	color: inherit;
-
-	&::before,
-	&::after{
-		content: '';
-		position: absolute;
-		height: calc(100% + 1em);
-		width: calc(100% + 1em);
-		max-width: 0%;
-		max-height: 0%;
-		transition: max-height .2s ease-out,
-					max-width .2s .2s ease-out,
-					border-color .25s .2s;
-	}
-
-	$link_animation: 2px solid transparent;
-
-	&::before{
-		top: -.5em;
-		left: -.5em;
-		border-top: $link_animation;
-		border-right: $link_animation;
-	}
-	&::after{
-		bottom: -.5em;
-		right: -.5em;
-		border-bottom: $link_animation;
-		border-left: $link_animation;
-	}
-
-	&:hover::before,
-	&:hover::after{
-		max-width: calc(100% + 1em);
-		max-height: 100%;
-		border-color: $text-color;
-		transition: max-width .2s ease-out,
-					max-height .2s .2s ease-out,
-					border-color .2s;
-	}
-}
-
-p .link{
-	color: $dark_blue;
-}
-
-.creamColor{
-	color: $cream;
-}
-.lowercase{
-	text-transform: none;
-}
-
-.container{
-	width: 90%;
-	margin: 0 auto;
-}
-
-section{
-	@media (min-width: $lg){
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-
-	.container{
-		max-width: 960px;
-	}
-}
-
-.classicSection{
-	display: inherit;
-	padding-top: 5em;
-	padding-bottom: 5em;
-	background: $light_blue;
-	text-align: center;
+section {
+	height: 100%;
 }

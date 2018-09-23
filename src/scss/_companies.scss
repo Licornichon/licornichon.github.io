@@ -1,0 +1,46 @@
+$companies: (
+	aramis: (
+		color: #0062ad,
+		bg: url('aramis.jpg')
+	),
+	slidor: (
+		color: #120d21,
+		bg: url('slidor.jpg')
+	),
+	nature: (
+		color: #1e2b3f,
+		bg: url('nature.jpeg')
+	),
+	kerala: (
+		color: #f60,
+		bg: url('kerala.jpg')
+	)
+);
+
+.aramis {
+	color: #0062ad
+}
+.bg.aramis {
+	background-image: url('../images/companies/aramis.jpg');
+}
+
+.slidor {
+	color: #120d21
+}
+.bg.slidor {
+	background-image: url('../images/companies/slidor.jpg');
+}
+
+.nature {
+	color: #1e2b3f
+}
+.col.bg.nature {
+	background-image: url('../images/companies/nature.jpeg');
+}
+
+.kerala {
+	color: #f60
+}
+.col.bg.kerala {
+	background-image: url('../images/companies/kerala.jpg');
+}

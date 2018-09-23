@@ -1,0 +1,18 @@
+// Breakpoints
+$m: 48rem;
+$l: 64rem;
+$xl: 90rem;
+$uxl: 120rem;
+
+// Typography
+$fontSize: 16px; // TODO: Set to fluid
+$h2: 4rem;
+$h3: 1.5rem;
+$smallText: .8rem;
+// Base Line Height
+$blh: 1.4;
+
+// Fonts 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:700');
+$fontTitle: 'Oswald', Impact, 'Franklin Gothic Bold', sans-serif;
+$fontText: 'Open Sans', Tahoma, sans-serif;

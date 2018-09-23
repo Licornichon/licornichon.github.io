@@ -1,0 +1,25 @@
+.col {
+	display: flex;
+	flex: 0 0 50%;
+	flex-direction: column;
+	justify-content: center;
+
+	&.content {
+		padding: 5rem;
+	}
+	
+	&.bg {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.experience:nth-of-type(2n+1) & {
+		&.bg {
+			order: 1;
+		}
+		&.content {
+			order: 2;
+		}
+	}
+}
