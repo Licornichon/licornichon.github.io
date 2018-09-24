@@ -52,7 +52,7 @@
 		overflow: hidden;
 	}
 
-	.experience:nth-of-type(2n) & {
+	.experience:nth-of-type(2n+4) & {
 		align-items: flex-end;
 	}
 
