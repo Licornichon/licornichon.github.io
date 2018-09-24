@@ -7,7 +7,7 @@
 
 	&__focus {
 		&::after {
-			background-color: $textColor;
+			background-color: $black;
 			content: '';
 			display: block;
 			height: 4px;
@@ -17,7 +17,51 @@
 	}
 
 	&__desc {
-		color: $grey;
-		max-width: 35rem;
+		width: 35rem;
+
+		& + & {
+			margin-top: 2rem;
+		}
+	}
+
+	&__img {
+		height: 100%;
+		left:50%;
+		position: absolute;
+		top:0;
+		transform: translateX(-50%);
+
+		img {
+			max-height: 100%;
+		}
+	}
+}
+
+.col {
+	display: flex;
+	flex: 0 0 50%;
+	flex-direction: column;
+	justify-content: center;
+
+	&.content {
+		padding: 5rem;
+	}
+	
+	&.bg {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.experience:nth-of-type(2n) & {
+		align-items: flex-end;
+	}
+
+	.experience:nth-of-type(2n+1) & {
+		&.bg {
+			order: 1;
+		}
+		&.content {
+			order: 2;
+		}
 	}
 }

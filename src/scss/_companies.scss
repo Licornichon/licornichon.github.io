@@ -1,46 +1,30 @@
-$companies: (
-	aramis: (
-		color: #0062ad,
-		bg: url('aramis.jpg')
-	),
-	slidor: (
-		color: #120d21,
-		bg: url('slidor.jpg')
-	),
-	nature: (
-		color: #1e2b3f,
-		bg: url('nature.jpeg')
-	),
-	kerala: (
-		color: #f60,
-		bg: url('kerala.jpg')
-	)
-);
-
 .aramis {
-	color: #0062ad
-}
-.bg.aramis {
-	background-image: url('../images/companies/aramis.jpg');
+	color: #1a587e
 }
 
 .slidor {
 	color: #120d21
 }
-.bg.slidor {
-	background-image: url('../images/companies/slidor.jpg');
-}
 
 .nature {
-	color: #1e2b3f
-}
-.col.bg.nature {
-	background-image: url('../images/companies/nature.jpeg');
+	color: #859b6b
 }
 
 .kerala {
-	color: #f60
+	color: #d67923
 }
-.col.bg.kerala {
-	background-image: url('../images/companies/kerala.jpg');
+
+.various {
+	color: #b78557
+}
+
+.codepen {
+	color: #4841ff
+}
+
+.mario {
+	background-image: url('../images/companies/mario.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
