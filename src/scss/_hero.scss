@@ -1,0 +1,17 @@
+.hero{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	&__title {
+		font-size: 5rem;
+		letter-spacing: .125em;
+	}
+
+	&__subtitle {
+		display: block;
+		font-size: .5em;
+		letter-spacing: .25em;
+	}
+}
