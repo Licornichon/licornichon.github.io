@@ -11,9 +11,9 @@ const config = {
     hot: true,
     inline: true,
     // static files served from here
-    contentBase: path.resolve(__dirname, "./src/"),
-    // open app in localhost:3000
-    port: 3000,
+    contentBase: path.resolve(__dirname, './src/'),
+    // open app in localhost:8080
+    port: 8080,
     stats: 'errors-only',
     open: true
   },
@@ -31,7 +31,7 @@ const config = {
     bundle: path.join(src, 'js/main.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname),
     filename: '[name].js'
   },
   module: {
