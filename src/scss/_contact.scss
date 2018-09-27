@@ -1,7 +1,9 @@
-@import "_colors";
-
-#contact{
-	.link{
-		font-weight: 400;
-	}
+.contact{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: $h3;
+	text-align: center;
+	line-height: $blh;
 }

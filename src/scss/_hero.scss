@@ -1,12 +1,19 @@
 .hero{
 	align-items: center;
+	background-image:
+		linear-gradient(to bottom, rgba($white, .3) 0%, rgba($white, 1) 90%, rgba($white, 1) 100%),
+		url('../images/hero.jpeg');
+	color: $white;
 	display: flex;
 	justify-content: center;
+	height: 100vh;
 	text-align: center;
 
 	&__title {
 		font-size: 5rem;
 		letter-spacing: .125em;
+		//mix-blend-mode: overlay;
+		color: $red;
 	}
 
 	&__subtitle {

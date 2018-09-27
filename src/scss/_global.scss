@@ -3,6 +3,7 @@
 }
 
 body{
+	background-color: $white;
 	color: $black;
 	font-family: $fontText;
 	font-size: $fontSize;
@@ -26,10 +27,6 @@ h3, .h3{
 	font-size: $h3;
 }
 
-section {
-	height: 100vh;
-}
-
 .grey {
 	color: $grey;
 }
@@ -40,4 +37,74 @@ em {
 
 b {
 	font-weight: 700;
+}
+
+$svgSize: $fontSize;
+img[src$='.svg'] {
+	height: $svgSize;
+	width: $svgSize;
+}
+
+img {
+	vertical-align: middle;
+	transition: filter 1s;
+}
+img.lazyestload {
+	filter: blur(8px);
+}
+
+.link {
+	display: inline-block;
+	position: relative; 
+	transition: color .1s ease-out;
+
+	&::before {
+		background-color: $red;
+		bottom: 0;
+		content: '';
+		display: block;
+		height: .1em;
+		left: -.1em;
+		padding: 0 .1em;
+		position: absolute;
+		transition: height .1s ease-out;
+		width: 100%;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: white;
+
+		&::before {
+			height: $blh;
+		}
+	}
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	40% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.beating-heart {
+	animation: beat .8s infinite;
+}
+
+@include media($l) {
+	section {
+		height: 100vh;
+	}
 }
