@@ -1,24 +1,66 @@
 .hero{
 	align-items: center;
-	background-image:
-		linear-gradient(to bottom, rgba($white, .3) 0%, rgba($white, 1) 90%, rgba($white, 1) 100%),
-		url('../images/hero.jpeg');
-	color: $white;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
 	text-align: center;
 
 	&__title {
 		font-size: 5rem;
-		letter-spacing: .125em;
-		//mix-blend-mode: overlay;
-		color: $red;
+		letter-spacing: .1em;
+		margin-bottom: 1em;
 	}
 
 	&__subtitle {
 		display: block;
 		font-size: .5em;
-		letter-spacing: .25em;
+		letter-spacing: .3em;
+	}
+}
+
+.tldr {
+	$timing: .15s;
+	color: $grey;
+	max-width: 80%;
+	position: relative;
+	transition: color $timing ease-out $timing;
+
+	&::before,
+	&::after {
+		border: solid 1px $grey;
+		content: '';
+		height: 5em;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1rem;
+	}
+
+	&::before {
+		border-right: 0;
+		right: 100%;
+		transition: right $timing ease-in-out;
+	}
+
+	&::after {
+		border-left: 0;
+		left: 100%;
+		transition: left $timing ease-in-out;
+	}
+
+	&.hidden {
+		color: transparent;
+		transition: color $timing ease-out;
+
+		&::before {
+			right: 55%;
+			transition: right $timing ease-in-out $timing;
+		}
+
+		&::after {
+			left: 55%;
+			transition: left $timing ease-in-out $timing;
+		}
 	}
 }

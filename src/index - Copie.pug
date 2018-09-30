@@ -1,0 +1,179 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='A small gallery of works from Antoine Payet')
+    meta(name='author', content='Antoine Payet')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Antoine Payet
+    // Favicons
+    link(rel='apple-touch-icon', sizes='180x180', href='images/apple-touch-icon.png')
+    link(rel='icon', type='image/png', href='images/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='images/favicon-16x16.png', sizes='16x16')
+    link(rel='manifest', href='images/manifest.json')
+    link(rel='mask-icon', href='images/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='msapplication-config', content='images/browserconfig.xml')
+    meta(name='theme-color', content='#ffffff')
+  body
+    header
+    main
+        section.hero
+            h1.hero__title Antoine Payet
+                span.hero__subtitle Développeur Front-End
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus not a portfolio, really.
+                    h2.experience__title 
+                        |‘Tis but a
+                        br
+                        |humble display.
+
+                    p.experience__desc 
+                        |Of what I can already do. Of what I cannot do and am willing to learn.
+                    p.experience__desc.grey
+                        |All the pictures below have been chosen for their aesthetic. I did not use screenshots or logos from the actual companies because it would have been, well, uglier… and I am not sure I have the right to, anyway. Thanks #[a.link(href='//www.pexels.com', title='www.pexels.com') Pexels] for always being there. 
+                        img.beating-heart(src='./images/svg/heart.svg', alt='red beating heart')
+            .col.content.mario
+                .experience__content
+                    h3.experience__focus it'sa me !
+                    h2.experience__title 
+                        |Let’s have fun,
+                        br
+                        |shall we ?
+
+                    p.experience__desc 
+                        |I am just your run-of-the-mill front-end developer. I wanted to be an artist. I like creativity and unleashing my imagination. I did not go that way because I also like money. The government seems pretty happy about my choice to pay more taxes.
+                    p.experience__desc 
+                        |I am able to use Google and Stack Overflow.
+                    p.experience__desc.grey
+                        |Usually a well hidden secret, I feel that I should tell you before you read any further : #[em I love working in music]. Do not worry, I wear headphones. But I sing. And it’s #[b terrible].
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus vroom vroom.
+                    h2.experience__title.aramis 
+                        |Aramisauto.
+                        a.external-link(href='//www.aramisauto.com', title='link to www.aramisauto.com')
+                            img(src='./images/svg/link.svg', alt='link svg')
+
+                    p.experience__desc 
+                        |They sell cars. New ones. Used ones. The website was kind of old and not so pretty. I was brought into the team to help change that. I think we did okay.
+                    p.experience__desc.grey
+                        |As far as I know they are still working on the last updates but I had to take a breather far from all that pollution. 
+            .col.bg.aramis
+                picture.experience__img
+                    source(media="(min-width: 300px)" data-srcset="./images/companies/aramis.jpg")
+                    img(class='lazyestload', src='./images/placeholder/aramis.jpg', alt='blue toy car')
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus relax.
+                    h2.experience__title.nature 
+                        |Nature &
+                        br
+                        |Découvertes.
+                        a.external-link(href='//www.natureetdecouvertes.com', title='link to www.natureetdecouvertes.com')
+                            img(src='./images/svg/link.svg', alt='link svg')
+
+                    p.experience__desc 
+                        |They sell a variety of things to help and encourage people to discover nature, and in turn, to respect and protect it.
+                    p.experience__desc.grey
+                        |Sounds kind of hippie. And hippies live on love and fresh water.
+            .col.bg.nature
+                picture.experience__img
+                    source(media="(min-width: 300px)" data-srcset="./images/companies/nature.jpeg")
+                    img(class='lazyestload', src='./images/placeholder/nature.jpeg', alt='green forest')
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus to infinity and beyond.
+                    h2.experience__title.kerala 
+                        |Kerala
+                        br
+                        |Ventures.
+                        a.external-link(href='//www.kerala.vc/', title='link to www.kerala.vc/')
+                            img(src='./images/svg/link.svg', alt='link svg')
+
+                    p.experience__desc 
+                        |Speaking of investors, Kerala Ventures throw small french companies into the deep end of the pool to better launch them into space.
+                    p.experience__desc.grey
+                        |They love rockets. I love rockets.
+                        br
+                        |I put rockets everywhere. They liked it.
+                        br
+                        |That was fun.
+            .col.bg.kerala
+                picture.experience__img
+                    source(media="(min-width: 300px)" data-srcset="./images/companies/kerala.jpeg")
+                    img(class='lazyestload', src='./images/placeholder/kerala.jpeg', alt='blurocket taking off at night')
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus next !
+                    h2.experience__title.slidor 
+                        |Slidor.
+                        a.external-link(href='//www.slidor.fr/', title='link to www.slidor.fr/')
+                            img(src='./images/svg/link.svg', alt='link svg')
+
+                    p.experience__desc 
+                        |Those of us who are not hippies need money to live. And what better way to obtain it than to get people to give it to you ? This is what Slidor is (mainly) about: creating breathtaking presentations in Microsoft Powerpoint to impress investors.
+                    p.experience__desc.grey
+                        |This website was coded only by yours truly (at the time) but each page describing a production was done by a different designer. It involved #[strike fighting] brainstorming a lot over what was possible and what was a good, possible idea with 7 people in a row... Print designers are great and make amazing assets but they are NOT easy on the developers for the web.
+                        br
+                        |But we almost won an #[a.link(href='//www.awwwards.com/sites/slidor-1', title='www.pexels.com') Awwward] for it.
+            .col.bg.slidor
+                picture.experience__img
+                    source(media="(min-width: 300px)" data-srcset="./images/companies/slidor.jpg")
+                    img(class='lazyestload', src='./images/placeholder/slidor.jpg', alt='showcase slidor')
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus jack of all trades.
+                    h2.experience__title.various 
+                        |A little bit
+                        br
+                        |of everything.
+
+                    p.experience__desc 
+                        |While working at Slidor, I not only coded their website, I also worked for a few of their clients who wished to offer to their own visitors a website that looked just like the presentation that was made for them: full of personality and #[em pixel-perfectly] pretty.
+                    p.experience__desc.grey
+                        |Ensue many hours of slightly moving this image. Slightly changing the timing of this animation. Slightly darkening the font color. Slightly killing myself every morning opening my messaging app. It was truly a great experience. I learned that sleep is just a concept.
+            .col.bg.various
+                picture.experience__img
+                    source(media="(min-width: 300px)" data-srcset="./images/companies/various.jpeg")
+                    img(class='lazyestload', src='./images/placeholder/various.jpeg', alt='artist painting in his shop')
+
+        section.experience
+            .col.content
+                .experience__content
+                    h3.experience__focus playground.
+                    h2.experience__title.codepen  
+                        |Sometimes
+                        br
+                        |I get bored.
+                        a.external-link(href='//codepen.io/Licornichon/', title='link to www.codepen.io/Licornichon/')
+                            img(src='./images/svg/link.svg', alt='link svg')
+
+                    p.experience__desc 
+                        |And I make stuff. Or rather, I try to, abandon it halfway through and never finish it. And when I have enough of painting pixels, I switch to real-life painting.
+                    p.experience__desc.grey
+                        |I like Codepen because it is full of great ideas to steal for later… way later.
+            .col.bg.codepen
+                picture.experience__img
+                    source(media="(min-width: 300px)" data-srcset="./images/companies/codepen.jpeg")
+                    img(class='lazyestload', src='./images/placeholder/codepen.jpeg', alt='amusement park at night')
+
+        section.contact
+            p Thank you for reading this far. Perhaps you would like to send me a message via #[a.link(href='//fr.linkedin.com/in/antoine-payet-0013aa98', title='personal LinkedIn account', target='_blank') LinkedIn] ?
+            p I don't really give my personal email until the third date.
+
+    footer
+        p I definitely don't have the rights to use some of this picture. This is non-commercial use, #[em right ?]
+        //p.goodbye There is nothing left. you have to go, now...
