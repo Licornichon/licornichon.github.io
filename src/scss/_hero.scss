@@ -39,13 +39,13 @@
 
 	&::before {
 		border-right: 0;
-		right: 100%;
+		right: calc(100% + 1rem);
 		transition: right $timing ease-in-out;
 	}
 
 	&::after {
 		border-left: 0;
-		left: 100%;
+		left: calc(100% + 1rem);
 		transition: left $timing ease-in-out;
 	}
 
@@ -54,13 +54,18 @@
 		transition: color $timing ease-out;
 
 		&::before {
-			right: 55%;
+			right: calc(50% + 1rem);
 			transition: right $timing ease-in-out $timing;
 		}
 
 		&::after {
-			left: 55%;
+			left: calc(50% + 1rem);
 			transition: left $timing ease-in-out $timing;
 		}
+	}
+
+	span {
+		display: inline-block;
+		min-height: $blh;
 	}
 }
