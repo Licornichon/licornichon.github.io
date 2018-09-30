@@ -36,46 +36,51 @@ const config = {
   },
   module: {
     rules: [
-    {
-      test: /\.pug$/,
-      use:  ['html-loader', 'pug-html-loader?pretty&exports=false']
-    },
-    {
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-    },
-    {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
-    },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.pug$/,
+        use:  ['html-loader', 'pug-html-loader?pretty&exports=false']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
       // file-loader(for images)
       { 
         test: /\.(jpg|jpeg|png|gif|svg)$/, 
-        use: [ 
-        { 
+        use: { 
           loader: 'file-loader', 
           options: { 
             name: '[name].[ext]', 
             outputPath: './assets/media/' 
           } 
         } 
-        ] 
       },
       // file-loader(for fonts)
       { 
         test: /\.(woff|woff2|eot|ttf|otf)$/, 
         use: ['file-loader'] 
       }
-      ]
-    },
-    plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'index.html',
-      template: path.join(src, 'index.pug'),
-    }),
-    ],
-  };
+    ]
+  },
+  plugins: [
+  new CleanWebpackPlugin(['dist']),
+  new webpack.HotModuleReplacementPlugin(),
+  new HtmlWebpackPlugin({
+    title: 'index.html',
+    template: path.join(src, 'index.pug'),
+  }),
+  ],
+};
 
-  module.exports = config;
+module.exports = config;
