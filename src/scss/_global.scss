@@ -3,7 +3,8 @@
 }
 
 body{
-	color: $black;
+	background-color: $black;
+	color: $grey;
 	font-family: $fontText;
 	font-size: $fontSize;
 	font-weight: 400;
@@ -13,9 +14,10 @@ body{
 
 h1, h2, h3,
 .h1, .h2, .h3{
+	color: $white;
 	font-family: $fontTitle;
-	font-weight: 700;
 	line-height: 1.2;
+	margin-bottom: 1rem;
 }
 
 h2, .h2{
@@ -26,10 +28,51 @@ h3, .h3{
 	font-size: $h3;
 }
 
-section {
-	height: 100vh;
+em {
+	font-style: italic;
 }
 
-.grey {
-	color: $grey;
+b {
+	font-weight: 700;
+}
+
+section {
+	padding: 1rem;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+.small {
+	font-size: $small;
+	opacity: .3;
+}
+
+.link {
+	display: inline-block;
+	position: relative; 
+	transition: color .1s ease-out;
+
+	&::before {
+		background-color: $red;
+		bottom: 0;
+		content: '';
+		display: block;
+		height: .1em;
+		left: -.1em;
+		padding: 0 .1em;
+		position: absolute;
+		transition: height .1s ease-out;
+		width: 100%;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: white;
+
+		&::before {
+			height: $blh;
+		}
+	}
 }

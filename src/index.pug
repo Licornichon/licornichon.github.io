@@ -19,142 +19,80 @@ html(lang='en')
     main
         section.hero
             h1.hero__title Antoine Payet
-                span.hero__subtitle Développeur Front-End
+                span.hero__subtitle Front-end developer
+            p.tldr 
+                span tl;dr: I am not good at design but love functional code.
 
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus Not a portfolio, really.
-                    h2.experience__title 
-                        |‘Tis but a
-                        br
-                        |humble display.
+        section
+            h2 Hi, I'm Antoine. #[br] Nice to meet you !
+            p My name is Antoine Payet and I have been working as a front-end developer for the past two years now.
+            p From start-ups to ecommerce leaders, my mission is always to implement intuitive interfaces and provide the endless hordes of monkeys of the internet a flawless experience. 
 
-                    p.experience__desc 
-                        |Of what I can already do. Of what I cannot do and am willing to learn.
-                    p.experience__desc.grey
-                        |All the pictures below have been chosen for their aesthetic. I did not use screenshots or logos from the actual companies because it would have been, well, uglier… and I am not sure I have the right to, anyway. Thanks Pexels for always being there. *un coeur qui bat*
-            .col.content.mario
-                .experience__content
-                    h3.experience__focus It'sa me !
-                    h2.experience__title 
-                        |Let’s have fun,
-                        br
-                        |shall we ?
+        section
+            h2 My design choices might be rather... dubious
+            p From an engineering background, I am not formally trained in designing interfaces, only in implementing them. 
+            p That is why I feel the more at ease working with a design team to feed me great arrangements of colored pixels to copy and ideas to steal from.
+            p As time goes by, and experience grows, it feels like I can make much more sensible choices now than I could two years ago. I strive to make them better and better. 
 
-                    p.experience__desc 
-                        |I am just your run-of-the-mill front-end developer. I wanted to be an artist. I like creativity and unleashing my imagination. I did not go that way because I also like money. The government seems pretty happy about my choice to pay more taxes.
-                    p.experience__desc.grey
-                        |Usually a well hidden secret, I feel that I should tell you before you read any further : I love working in music. Do not worry, I wear headphones. But I sing. And it’s terrible.
+        section
+            h2 What can I do then ?
+            p If left to myself, I tend to code things from scratch, and enjoy bringing ideas to life in the browser.
+            div.columns
+                div.column
+                    h3.column__title Languages
+                    ul
+                        li HTML, Pug, ASP.NET
+                        li CSS, SCSS
+                        li JS (ES6), JQuery, just picked up Vue.js
+                        li PHP, Symfony 2 (& Twig), MySQL
+                        li Bootstrap, Wordpress
+                div.column
+                    h3.column__title Dev tools
+                    ul
+                        li Sublime Text, PHPStorm
+                        li Gulp, webpack
+                        li Git (#[a.link(href='//www.github.com/Licornichon', title='link to www.github.com/Licornichon') Github] & CLI)
+                        li #[a.link(href='//codepen.io/Licornichon/', title='link to www.codepen.io/Licornichon/') Codepen], Webflow
+                        li Zeplin (End-user only) 
+                div.column
+                    h3.column__title Want some more ?
+                    ul
+                        li French: native language
+                        li English: professional level
+                        li Hobbies include:
+                            ul.second-level-list
+                                li Everything fantasy related
+                                li Painting
+                                li Board games 
+                                li Archery
 
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus Vroom Vroom.
-                    h2.experience__title.aramis Aramisauto.
-
-                    p.experience__desc 
-                        |They sell cars. New ones. Used ones. The website was kind of old and not so pretty. I was brought into the team to help change that. I think we did okay.
-                    p.experience__desc.grey
-                        |As far as I know they are still working on the last updates but I had to take a breather far from all that pollution. 
-            .col.bg.aramis
-                picture.experience__img
-                    img(src='./images/companies/aramis.jpg', alt='showcase slidor')
-
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus focus.
-                    h2.experience__title.nature 
-                        |Nature &
-                        br
-                        |Découvertes.
-
-                    p.experience__desc 
-                        |They sell a variety of things to help and encourage people to discover nature, and in turn, to respect and protect it.
-                    p.experience__desc.grey
-                        |Sounds kind of hippie. And hippies live on love and fresh water.
-            .col.bg.nature
-                picture.experience__img
-                    img(src='./images/companies/nature.jpeg', alt='green forest')
-
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus Next !
-                    h2.experience__title.slidor 
-                        |Slidor.
-
-                    p.experience__desc 
-                        |Those of us who are not hippies need money to live. And what better way to obtain it than to get people to give it to you ? This is what Slidor is (mainly) about: creating breathtaking presentations in Microsoft Powerpoint to impress investors.
-                    p.experience__desc.grey
-                        |This website was coded only by yours truly (at the time) but each page describing a production was done by a different designer. It involved ~brainstorming~ fighting a lot over what was possible and what was a good, possible idea with 7 people in a row... Print designers are great and make amazing assets but they are NOT easy on the developers for the web.
-                        br
-                        |But we almost won an Awwward for it. https://www.awwwards.com/sites/slidor-1
-            .col.bg.slidor
-                picture.experience__img
-                    img(src='./images/companies/slidor.jpg', alt='showcase slidor')
-
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus To infinity and beyond.
-                    h2.experience__title.kerala 
-                        |Kerala
-                        br
-                        |Ventures.
-
-                    p.experience__desc 
-                        |Speaking of investors, Kerala Ventures throw small french companies into the deep end of the pool to better launch them into space.
-                    p.experience__desc.grey
-                        |They love rockets. I love rockets.
-                        br
-                        |I put rockets everywhere. They liked it.
-                        br
-                        |That was fun.
-            .col.bg.kerala
-                picture.experience__img
-                    img(src='./images/companies/kerala.jpeg', alt='rocket taking off at night')
-
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus To infinity and beyond.
-                    h2.experience__title.various 
-                        |A little bit
-                        br
-                        |of everything.
-
-                    p.experience__desc 
-                        |While working at Slidor, I not only coded their website, I also worked for a few of their clients who wished to offer to their own visitors a website that looked just like the presentation that was made for them: full of personality and pixel-perfectly pretty.
-                    p.experience__desc.grey
-                        |Ensue many hours of slightly moving this image. Slightly changing the timing of this animation. Slightly darkening the font color. Slightly killing myself every morning opening my messaging app. It was truly a great experience. I learned that sleep is just a concept.
-            .col.bg.various
-                picture.experience__img
-                    img(src='./images/companies/various.jpeg', alt='artist painting in his shop')
-
-        section.experience
-            .col.content
-                .experience__content
-                    h3.experience__focus Playground.
-                    h2.experience__title.codepen  
-                        |Sometimes
-                        br
-                        |I get bored.
-
-                    p.experience__desc 
-                        |And I make stuff. Or rather, I try to, abandon it halfway through and never finish it. And when I have enough of painting pixels, I switch to real-life painting.
-                    p.experience__desc.grey
-                        |I like Codepen because it is full of great ideas to steal for later… way later.
-            .col.bg.codepen
-                picture.experience__img
-                    img(src='./images/companies/codepen.jpeg', alt='amusement park at night')
+        section
+            h2 Recent works
+            ul.works
+                li.works__item
+                    a.company.aramisauto(href='//www.aramisauto.com', title='link to www.aramisauto.com')
+                        figure.company__container
+                            img.company__logo(src='./images/aramisauto.svg', alt='aramisauto logo')
+                            figcaption.company__caption Leader of the new and used cars on internet in France
+                li.works__item
+                    a.company.slidor(href='//www.slidor.fr/', title='link to www.slidor.fr/')
+                        figure.company__container
+                            img.company__logo(src='./images/slidor.svg', alt='slidor logo')
+                            figcaption.company__caption Making breathtaking presentations in PowerPoint
+                li.works__item 
+                    a.company.kerala(href='//www.kerala.vc/', title='link to www.kerala.vc/')
+                        figure.company__container
+                            img.company__logo(src='./images/krl.png', alt='kerala ventures logo')
+                            figcaption.company__caption Backing entrepreneurs from day one
+                li.works__item 
+                    a.company.ned(href='//www.natureetdecouvertes.com', title='link to www.natureetdecouvertes.com')
+                        figure.company__container
+                            img.company__logo(src='./images/ned.png', alt='nature et découvertes ventures logo')
+                            figcaption.company__caption Kinda enjoying nature through overpriced products
 
         section.contact
-            p Thank you for reading this far. Perhaps you would like to send me a message via LinkedIn ?
-            p 
-                em I don't really give my personal email until the third date.
+            p Thank you for reading this far. Perhaps you would like to send me a message via #[a.link(href='//fr.linkedin.com/in/antoine-payet-0013aa98', title='personal LinkedIn account', target='_blank') LinkedIn] ?
+                span.small  #[em I don't really give my email directly until the third date.]
 
     footer
-        p
-        p.goodbye There is nothing left. you have to go, now...
+        p.goodbye Design choices heavily influenced by this #[a.link(href='//motherfuckingwebsite.com/', title='link to https://motherfuckingwebsite.com/', target='_blank') mother f*cking website].
