@@ -1,13 +1,32 @@
-.columns {
-
-}
-
 .column {
 	& + & {
 		margin-top: 1rem;
 	} 
 
 	&__title {
-		margin-bottom: 0;
+		margin-bottom: .5rem;
+	}
+}
+
+@include media($m) {
+	.columns {
+		display: flex;
+	}
+
+	.column {
+		flex: 1 0 percentage(1/3);
+		padding: 0 .5rem;
+
+		& + & {
+			margin-top: 0;
+		} 
+
+		&:first-of-type {
+			padding-left: 0;
+		}
+
+		&:last-of-type {
+			padding-right: 0;
+		}
 	}
 }

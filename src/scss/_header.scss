@@ -13,3 +13,9 @@ header {
 .hamburger {
 	
 }
+
+@include media($m) {
+	header {
+		text-align: center;
+	}
+}
