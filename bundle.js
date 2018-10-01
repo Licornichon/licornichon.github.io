@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b662b074b8e25261436d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f42e93c88af32d65d275"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -721,19 +721,19 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(6)(__webpack_require__.s = 6);
+/******/ 	return hotCreateRequire(7)(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(8)(false);
+exports = module.exports = __webpack_require__(9)(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:700);", ""]);
 
 // module
-exports.push([module.i, "/* \r\nhttp://meyerweb.com/eric/tools/css/reset/ \r\nv2.0 | 20110126\r\nLicense: none (public domain) */\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\na {\n  color: inherit;\n  text-decoration: none; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background-color: #020202;\n  color: #777777;\n  font-family: \"Open Sans\", Tahoma, sans-serif;\n  font-size: 18px;\n  font-weight: 400;\n  height: 100vh;\n  line-height: 1.4em; }\n\nh1, h2, h3,\n.h1, .h2, .h3 {\n  color: #f2f2f2;\n  font-family: \"Oswald\", Impact, \"Franklin Gothic Bold\", sans-serif;\n  line-height: 1.2;\n  margin-bottom: 1rem; }\n\nh2, .h2 {\n  font-size: 2rem; }\n\nh3, .h3 {\n  font-size: 1.5rem; }\n\nem {\n  font-style: italic; }\n\nb {\n  font-weight: 700; }\n\nsection {\n  padding: 1rem; }\n\np {\n  margin-bottom: 1rem; }\n\n.small {\n  font-size: 0.8rem;\n  opacity: .3; }\n\n.link {\n  display: inline-block;\n  position: relative;\n  transition: color .1s ease-out; }\n  .link::before {\n    background-color: #d75a4a;\n    bottom: 0;\n    content: '';\n    display: block;\n    height: .1em;\n    left: -.1em;\n    padding: 0 .1em;\n    position: absolute;\n    transition: height .1s ease-out;\n    width: 100%;\n    z-index: -1; }\n  .link:hover {\n    color: white; }\n    .link:hover::before {\n      height: 1.4em; }\n\n.hero {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 100vh;\n  text-align: center; }\n  .hero__title {\n    font-size: 5rem;\n    letter-spacing: .1em;\n    margin-bottom: 1em; }\n  .hero__subtitle {\n    display: block;\n    font-size: .5em;\n    letter-spacing: .3em; }\n\n.tldr {\n  color: #777777;\n  max-width: 80%;\n  position: relative;\n  transition: color 0.15s ease-out 0.15s; }\n  .tldr::before, .tldr::after {\n    border: solid 1px #777777;\n    content: '';\n    height: 5em;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 1rem; }\n  .tldr::before {\n    border-right: 0;\n    right: calc(100% + 1rem);\n    transition: right 0.15s ease-in-out; }\n  .tldr::after {\n    border-left: 0;\n    left: calc(100% + 1rem);\n    transition: left 0.15s ease-in-out; }\n  .tldr.hidden {\n    color: transparent;\n    transition: color 0.15s ease-out; }\n    .tldr.hidden::before {\n      right: calc(50% + 1rem);\n      transition: right 0.15s ease-in-out 0.15s; }\n    .tldr.hidden::after {\n      left: calc(50% + 1rem);\n      transition: left 0.15s ease-in-out 0.15s; }\n  .tldr span {\n    display: inline-block;\n    min-height: 1.4em; }\n\n.column + .column {\n  margin-top: 1rem; }\n\n.column__title {\n  margin-bottom: 0; }\n\n.works__item + .works__item {\n  margin-top: 1rem; }\n\n.company__container {\n  background-color: #f2f2f2;\n  border-radius: 1rem;\n  padding: 1rem; }\n\n.company__logo {\n  width: 100%; }\n\n@media screen and (min-width: 64rem) {\n  .company__container {\n    position: relative;\n    z-index: 0; }\n  .company__caption {\n    align-items: center;\n    display: flex;\n    height: 100%;\n    justify-content: center;\n    left: 0;\n    padding: 2rem;\n    position: absolute;\n    top: 0;\n    width: 100%;\n    z-index: 1; } }\n\nfooter {\n  font-size: 0.8rem;\n  padding: 1rem;\n  text-align: center; }\n", ""]);
+exports.push([module.i, "/* \r\nhttp://meyerweb.com/eric/tools/css/reset/ \r\nv2.0 | 20110126\r\nLicense: none (public domain) */\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\na {\n  color: inherit;\n  text-decoration: none; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background-color: #020202;\n  color: #777777;\n  font-family: \"Open Sans\", Tahoma, sans-serif;\n  font-size: 18px;\n  font-weight: 400;\n  height: 100vh;\n  line-height: 1.4em; }\n\nh1, h2, h3,\n.h1, .h2, .h3 {\n  color: #f2f2f2;\n  font-family: \"Oswald\", Impact, \"Franklin Gothic Bold\", sans-serif;\n  line-height: 1.2;\n  margin-bottom: 1rem; }\n\nh2, .h2 {\n  font-size: 2rem; }\n\nh3, .h3 {\n  font-size: 1.5rem; }\n\nem {\n  font-style: italic; }\n\nb {\n  font-weight: 700; }\n\nsection {\n  padding: 1rem; }\n\np {\n  margin-bottom: 1rem; }\n\n.small {\n  font-size: 0.8rem; }\n\n.link {\n  display: inline-block;\n  position: relative;\n  transition: color .1s ease-out; }\n  .link::before {\n    background-color: #d75a4a;\n    bottom: 0;\n    content: '';\n    display: block;\n    height: .1em;\n    left: -.1em;\n    padding: 0 .1em;\n    position: absolute;\n    transition: height .1s ease-out;\n    width: 100%;\n    z-index: -1; }\n  .link:hover {\n    color: white; }\n    .link:hover::before {\n      height: 1.4em; }\n\nheader {\n  left: 0;\n  padding: 1rem;\n  position: fixed;\n  top: 0;\n  width: 100%; }\n\n.logo {\n  height: 3rem; }\n\n.hero {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 100vh;\n  text-align: center; }\n  .hero__title {\n    font-size: 5rem;\n    letter-spacing: .1em;\n    margin-bottom: 1em; }\n  .hero__subtitle {\n    display: block;\n    font-size: .5em;\n    letter-spacing: .3em; }\n\n.tldr {\n  color: #777777;\n  max-width: 80%;\n  position: relative;\n  transition: color 0.15s ease-out 0.15s; }\n  .tldr::before, .tldr::after {\n    border: solid 1px #d75a4a;\n    content: '';\n    height: 5em;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 1rem; }\n  .tldr::before {\n    border-right: 0;\n    right: calc(100% + 1rem);\n    transition: right 0.15s ease-in-out; }\n  .tldr::after {\n    border-left: 0;\n    left: calc(100% + 1rem);\n    transition: left 0.15s ease-in-out; }\n  .tldr.hidden {\n    color: transparent;\n    transition: color 0.15s ease-out; }\n    .tldr.hidden::before {\n      right: calc(50% + 1rem);\n      transition: right 0.15s ease-in-out 0.15s; }\n    .tldr.hidden::after {\n      left: calc(50% + 1rem);\n      transition: left 0.15s ease-in-out 0.15s; }\n  .tldr span {\n    display: inline-block;\n    min-height: 1.4em; }\n\n.column + .column {\n  margin-top: 1rem; }\n\n.column__title {\n  margin-bottom: 0; }\n\n.works__item + .works__item {\n  margin-top: 1rem; }\n\n.company__container {\n  background-color: #f2f2f2;\n  border-radius: 1rem;\n  padding: 1rem; }\n\n.company__logo {\n  width: 100%; }\n\n@media screen and (min-width: 64rem) {\n  .company__container {\n    position: relative;\n    z-index: 0; }\n  .company__caption {\n    align-items: center;\n    display: flex;\n    height: 100%;\n    justify-content: center;\n    left: 0;\n    padding: 2rem;\n    position: absolute;\n    top: 0;\n    width: 100%;\n    z-index: 1; } }\n\nfooter {\n  font-size: 0.8rem;\n  padding: 1rem;\n  text-align: center; }\n", ""]);
 
 // exports
 
@@ -744,14 +744,15 @@ exports.push([module.i, "/* \r\nhttp://meyerweb.com/eric/tools/css/reset/ \r\nv2
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const styles = __webpack_require__(7);
-const lazy = __webpack_require__(11);
+const styles = __webpack_require__(8);
+const lazy = __webpack_require__(12);
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -765,7 +766,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(9)(content, options);
+var update = __webpack_require__(10)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
@@ -782,7 +783,7 @@ if(true) {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 /*
@@ -864,7 +865,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -910,7 +911,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(10);
+var	fixUrls = __webpack_require__(11);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1223,7 +1224,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 
@@ -1318,7 +1319,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 (function tldr() {

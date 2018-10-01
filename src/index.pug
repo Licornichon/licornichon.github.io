@@ -22,6 +22,7 @@ html(lang='en')
     meta(name='theme-color', content='#ffffff')
   body
     header
+        img.logo(src='./images/unicorn.svg', alt='Unicorn impaling a poor dude')
     main
         section.hero
             h1.hero__title Antoine Payet
@@ -93,12 +94,14 @@ html(lang='en')
                 li.works__item 
                     a.company.ned(href='//www.natureetdecouvertes.com', title='link to www.natureetdecouvertes.com')
                         figure.company__container
-                            img.company__logo(src='./images/ned.png', alt='nature et découvertes ventures logo')
+                            img.company__logo(src='./images/ned.png', alt='nature et découvertes logo')
                             figcaption.company__caption Kinda enjoying nature through overpriced products
 
         section.contact
-            p Thank you for reading this far. Perhaps you would like to send me a message via #[a.link(href='//fr.linkedin.com/in/antoine-payet-0013aa98', title='personal LinkedIn account', target='_blank') LinkedIn] ?
-                span.small  #[em I don't really give my email directly until the third date.]
+            h2 Any of this caught your attention ?
+            p Perhaps you would like to send me a message via #[a.link(href='//fr.linkedin.com/in/antoine-payet-0013aa98', title='personal LinkedIn account', target='_blank') LinkedIn] for any more detail ?
+            p.small  #[em I don't really give my email directly until the third date.]
 
     footer
-        p.goodbye Design choices heavily influenced by this #[a.link(href='//motherfuckingwebsite.com/', title='link to https://motherfuckingwebsite.com/', target='_blank') mother f*cking website].
+        p.small
+            em Design choices heavily influenced by this #[a.link(href='//motherfuckingwebsite.com/', title='link to https://motherfuckingwebsite.com/', target='_blank') mother f*cking website]. Beware, strong language.
