@@ -14,25 +14,69 @@
 	}
 
 	&__logo {
-		width: 100%; 
+		height: 4rem;
+		margin-bottom: 1rem;
+		max-width: 100%; 
+	}
+}
+
+@include media($m) {
+	.works {
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+			flex: 1 0 50%;
+
+			& + & {
+				margin: 0
+			}
+		}
+	}
+
+	.company {
+		&__container {
+			align-items: center;
+			border: solid 2px $black;
+			display: flex;
+			flex-direction: column;
+			height: 13rem;
+			padding: 2rem;
+		}
 	}
 }
 
 @include media($l) {
 	.company {
 		&__container {
+			justify-content: center;
+			overflow: hidden;
 			position: relative;
 			z-index: 0;
+
+			&:hover {
+				.company__caption {
+					opacity: 1;
+					pointer-events: none;
+				}
+			}
 		}
 
 		&__caption {
 			align-items: center;
+			background-color: $red;
+			color: $white;
 			display: flex;
+			font-weight: 700;
 			height: 100%;
 			justify-content: center;
 			left: 0;
+			opacity: 0;
 			padding: 2rem;
+			pointer-events: none;
 			position: absolute;
+			text-align: center;
+			transition: opacity .25s ease-out;
 			top: 0;
 			width: 100%;
 			z-index: 1;
