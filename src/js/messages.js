@@ -11,7 +11,7 @@
 		'I\'m out.',
 	];
 	const tldr = document.querySelector('.tldr'),
-		elem = tldr.querySelector('span');
+		elem = tldr.querySelector('.tldr__content');
 
 	const _changeCatchphrase = () => {
 		tldr.classList.add('hidden');
@@ -23,6 +23,7 @@
 		},500);
 	};
 
+	// Change catchphrase every 4s
 	const intrvl = setInterval(() => {
 		_changeCatchphrase();
 		if (!catchphrases.length) {

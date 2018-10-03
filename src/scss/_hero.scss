@@ -2,14 +2,14 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	height: 100vh;
 	text-align: center;
 
 	&__title {
 		font-size: 5rem;
 		letter-spacing: .1em;
-		margin-bottom: 1em;
+		margin: 1rem 0 0;
 	}
 
 	&__subtitle {
@@ -21,8 +21,10 @@
 
 .tldr {
 	$timing: .15s;
+	$height: 5rem;
 	color: $grey;
-	max-width: 80%;
+	height: $height;
+	max-width: calc(80% - 2rem);
 	position: relative;
 	transition: color $timing ease-out $timing;
 
@@ -30,7 +32,7 @@
 	&::after {
 		border: solid 1px $red;
 		content: '';
-		height: 5em;
+		height: $height;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -64,8 +66,9 @@
 		}
 	}
 
-	span {
-		display: inline-block;
-		min-height: $blh;
+	&__content {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }

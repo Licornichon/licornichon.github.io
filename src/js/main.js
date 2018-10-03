@@ -1,2 +1,3 @@
 const styles = require('../scss/main.scss')
-const lazy = require('./messages.js')
+const messages = require('./messages.js')
+const anchors = require('./anchors.js')
