@@ -85,6 +85,18 @@ p {
 	}
 }
 
+.anchor {
+	&.active {
+		animation: colorChange 1s linear 1 reverse;
+
+		@keyframes colorChange {
+			75% {
+				color: $red;
+			}
+		}
+	}
+}
+
 @include media($m) {
 	body {
 		margin: 0 auto;
