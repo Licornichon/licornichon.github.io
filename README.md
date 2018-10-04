@@ -14,3 +14,5 @@ To do :
   - Links to other pages not visible enough ✔️
   - add 'in Paris' to description ✔️
   - Better catchphrases
+  - broken hamburger
+  - animations in edge
