@@ -48,7 +48,7 @@ header {
 				height: $iconHeight;
 				transition: transform .2s ease-out;
 				transform-origin: bottom right;
-			} 
+			}
 		}
 
 		&:checked {
@@ -87,7 +87,20 @@ header {
 		top: 0;
 		transition: opacity .2s ease-out;
 		width: 100%;
-	}
+
+    &::before {
+      // To hide ugly little bug on mobile
+      // if you scroll with the open menu
+      background-color: $black;
+      content: '';
+      height: 50%;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
 }
 
 @include media($m) {
