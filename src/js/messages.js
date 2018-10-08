@@ -6,7 +6,6 @@
 		'You will here me singing, badly.',
 		'Black coffee. Black metal. Black... website ?',
 		'I need you to scroll down now.',
-		'Please...',
 		'No really, you would do me a great favor.',
 		'I\'m out.',
 	];

@@ -36,41 +36,41 @@ const config = {
   },
   module: {
     rules: [
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.pug$/,
-        use:  ['html-loader', 'pug-html-loader?pretty&exports=false']
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      // file-loader(for images)
-      { 
-        test: /\.(jpg|jpeg|png|gif|svg)$/, 
-        use: { 
-          loader: 'file-loader', 
-          options: { 
-            name: '[name].[ext]', 
-            outputPath: './assets/media/' 
-          } 
-        } 
-      },
-      // file-loader(for fonts)
-      { 
-        test: /\.(woff|woff2|eot|ttf|otf)$/, 
-        use: ['file-loader'] 
+    {
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env']
       }
+    },
+    {
+      test: /\.pug$/,
+      use:  ['html-loader', 'pug-html-loader?pretty&exports=false']
+    },
+    {
+      test: /\.scss$/,
+      exclude: /node_modules/,
+      use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+    },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+    },
+    {
+      test: /\.(jpg|jpeg|png|gif|svg)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: './assets/media/'
+        }
+      }
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: ['file-loader']
+    }
     ]
   },
   plugins: [

@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b42faeebf3f66f537460"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e729a7323cbf7b224b4b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -733,7 +733,7 @@ exports = module.exports = __webpack_require__(9)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:700);", ""]);
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n/* \r\nhttp://meyerweb.com/eric/tools/css/reset/ \r\nv2.0 | 20110126\r\nLicense: none (public domain) */\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\na {\n  color: inherit;\n  text-decoration: none; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background-color: #020202;\n  color: #777777;\n  font-family: \"Open Sans\", Tahoma, sans-serif;\n  font-size: 18px;\n  font-weight: 400;\n  height: 100vh;\n  line-height: 1.4em; }\n\nh1, h2, h3,\n.h1, .h2, .h3 {\n  color: #f2f2f2;\n  font-family: \"Oswald\", Impact, \"Franklin Gothic Bold\", sans-serif;\n  line-height: 1.2;\n  margin-bottom: 1rem; }\n\nh2, .h2 {\n  font-size: 2rem; }\n\nh3, .h3 {\n  font-size: 1.5rem; }\n\nem {\n  font-style: italic; }\n\nb {\n  font-weight: 700; }\n\nsection {\n  padding: 1rem; }\n\np {\n  margin-bottom: 1rem; }\n\n.list {\n  list-style: disc inside; }\n  .list .list {\n    list-style: circle inside;\n    padding-left: 1.5rem; }\n\n.small {\n  font-size: 0.8rem; }\n\n.link {\n  display: inline-block;\n  position: relative;\n  transition: color .1s ease-out; }\n  .link::before {\n    background-color: #d75a4a;\n    bottom: 0;\n    content: '';\n    display: block;\n    height: .1em;\n    left: -.1em;\n    padding: 0 .1em;\n    position: absolute;\n    transition: height .1s ease-out;\n    width: 100%;\n    z-index: -1; }\n  .link:hover {\n    color: white; }\n    .link:hover::before {\n      height: 1.4em; }\n\n.anchor.active {\n  animation: colorChange 1s linear 1 reverse; }\n\n@keyframes colorChange {\n  75% {\n    color: #d75a4a; } }\n\n@media screen and (min-width: 48rem) {\n  body {\n    margin: 0 auto;\n    max-width: 48rem; } }\n\nheader {\n  left: 0;\n  padding: 1rem;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 10; }\n\n.logo {\n  height: 30px; }\n\n.menu__consumerist-sandwich + label {\n  border-bottom: solid 3px #d75a4a;\n  cursor: pointer;\n  display: inline-block;\n  position: absolute;\n  right: 1rem;\n  top: 1rem;\n  transform-origin: top right;\n  transition: transform .2s ease-out;\n  width: 30px;\n  z-index: 2; }\n  .menu__consumerist-sandwich + label::before, .menu__consumerist-sandwich + label::after {\n    border-bottom: solid 3px #d75a4a;\n    content: '';\n    display: inline-block;\n    position: absolute;\n    right: 0;\n    top: 0;\n    width: 100%; }\n  .menu__consumerist-sandwich + label::before {\n    height: 15px;\n    transition: opacity .1s ease-out; }\n  .menu__consumerist-sandwich + label::after {\n    height: 30px;\n    transition: transform .2s ease-out;\n    transform-origin: bottom right; }\n\n.menu__consumerist-sandwich:checked + label {\n  transform: rotate(-45deg); }\n  .menu__consumerist-sandwich:checked + label::before {\n    opacity: 0; }\n  .menu__consumerist-sandwich:checked + label::after {\n    transform: rotate(90deg) translate(-50%, 50%); }\n\n.menu__consumerist-sandwich:not(:checked) ~ .menu__links {\n  opacity: 0;\n  pointer-events: none; }\n\n.menu__links {\n  align-items: center;\n  background-color: #020202;\n  color: #f2f2f2;\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  justify-content: space-around;\n  left: 0;\n  position: fixed;\n  text-transform: uppercase;\n  top: 0;\n  transition: opacity .2s ease-out;\n  width: 100%; }\n\n@media screen and (min-width: 48rem) {\n  header {\n    text-align: center; } }\n\n.hero {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  height: 100vh;\n  text-align: center; }\n  .hero__title {\n    font-size: 5rem;\n    letter-spacing: .1em;\n    margin: 1rem 0 0; }\n  .hero__subtitle {\n    display: block;\n    font-size: .5em;\n    letter-spacing: .3em; }\n\n.tldr {\n  color: #777777;\n  height: 5rem;\n  max-width: calc(80% - 2rem);\n  position: relative;\n  transition: color 0.15s ease-out 0.15s; }\n  .tldr::before, .tldr::after {\n    border: solid 1px #d75a4a;\n    content: '';\n    height: 5rem;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 1rem; }\n  .tldr::before {\n    border-right: 0;\n    right: calc(100% + 1rem);\n    transition: right 0.15s ease-in-out; }\n  .tldr::after {\n    border-left: 0;\n    left: calc(100% + 1rem);\n    transition: left 0.15s ease-in-out; }\n  .tldr.hidden {\n    color: transparent;\n    transition: color 0.15s ease-out; }\n    .tldr.hidden::before {\n      right: calc(50% + 1rem);\n      transition: right 0.15s ease-in-out 0.15s; }\n    .tldr.hidden::after {\n      left: calc(50% + 1rem);\n      transition: left 0.15s ease-in-out 0.15s; }\n  .tldr__content {\n    position: relative;\n    top: 50%;\n    transform: translateY(-50%); }\n\n.column + .column {\n  margin-top: 1rem; }\n\n.column__title {\n  margin-bottom: .5rem; }\n\n@media screen and (min-width: 48rem) {\n  .columns {\n    display: flex; }\n  .column {\n    flex: 1 0 33.33333%;\n    padding: 0 .5rem; }\n    .column + .column {\n      margin-top: 0; }\n    .column:first-of-type {\n      padding-left: 0; }\n    .column:last-of-type {\n      padding-right: 0; } }\n\n.works__item + .works__item {\n  margin-top: 1rem; }\n\n.company__container {\n  background-color: #f2f2f2;\n  border-radius: 1rem;\n  padding: 1rem; }\n\n.company__logo {\n  max-width: 100%;\n  display: block;\n  margin: 0 auto 1rem;\n  max-height: 4rem; }\n\n.company__caption::before {\n  content: '\\1F517';\n  margin-right: 1rem; }\n\n@media screen and (min-width: 48rem) {\n  .works {\n    display: flex;\n    flex-wrap: wrap; }\n    .works__item {\n      flex: 1 0 50%; }\n      .works__item + .works__item {\n        margin: 0; }\n  .company__container {\n    align-items: center;\n    border: solid 2px #020202;\n    display: flex;\n    flex-direction: column;\n    height: 13rem;\n    padding: 2rem; }\n  .company__caption {\n    align-items: center;\n    display: flex;\n    flex: 1 0 auto; } }\n\n@media screen and (min-width: 64rem) {\n  .company__container {\n    justify-content: center;\n    overflow: hidden;\n    position: relative;\n    z-index: 0; }\n    .company__container:hover .company__caption {\n      opacity: 1;\n      pointer-events: none; }\n  .company__logo {\n    margin-bottom: 0; }\n  .company__caption {\n    align-items: center;\n    background-color: #d75a4a;\n    color: #f2f2f2;\n    display: flex;\n    font-weight: 700;\n    height: 100%;\n    justify-content: center;\n    left: 0;\n    opacity: 0;\n    padding: 2rem;\n    pointer-events: none;\n    position: absolute;\n    text-align: center;\n    transition: opacity .25s ease-out;\n    top: 0;\n    width: 100%;\n    z-index: 1; }\n    .company__caption::before {\n      content: none; } }\n\nfooter {\n  font-size: 0.8rem;\n  padding: 1rem;\n  text-align: center; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}a{color:inherit;text-decoration:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:\"\";content:none}table{border-collapse:collapse;border-spacing:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}body{background-color:#020202;color:#777;font-family:Open Sans,Tahoma,sans-serif;font-size:18px;font-weight:400;height:100vh;line-height:1.4em}.h1,.h2,.h3,h1,h2,h3{color:#f2f2f2;font-family:Oswald,Impact,Franklin Gothic Bold,sans-serif;line-height:1.2;margin-bottom:1rem}.h2,h2{font-size:2rem}.h3,h3{font-size:1.5rem}em{font-style:italic}b{font-weight:700}section{padding:1rem}p{margin-bottom:1rem}.list{list-style:disc inside}.list .list{list-style:circle inside;padding-left:1.5rem}.small{font-size:.8rem}.link{display:inline-block;position:relative;-webkit-transition:color .1s ease-out;transition:color .1s ease-out}.link:before{background-color:#d75a4a;bottom:0;content:\"\";display:block;height:.1em;left:-.1em;padding:0 .1em;position:absolute;-webkit-transition:height .1s ease-out;transition:height .1s ease-out;width:100%;z-index:-1}.link:hover{color:#fff}.link:hover:before{height:1.4em}.anchor.active{animation:colorChange 1s linear 1 reverse}@-webkit-keyframes colorChange{75%{color:#d75a4a}}@keyframes colorChange{75%{color:#d75a4a}}@media screen and (min-width:48rem){body{margin:0 auto;max-width:48rem}}header{left:0;padding:1rem;position:fixed;top:0;width:100%;z-index:10}.logo{height:30px}.menu__consumerist-sandwich+label{border-bottom:3px solid #d75a4a;cursor:pointer;display:inline-block;position:absolute;right:1rem;top:1rem;-webkit-transform-origin:top right;transform-origin:top right;-webkit-transition:-webkit-transform .2s ease-out;transition:-webkit-transform .2s ease-out;transition:transform .2s ease-out;transition:transform .2s ease-out,-webkit-transform .2s ease-out;width:30px;z-index:2}.menu__consumerist-sandwich+label:after,.menu__consumerist-sandwich+label:before{border-bottom:3px solid #d75a4a;content:\"\";display:inline-block;position:absolute;right:0;top:0;width:100%}.menu__consumerist-sandwich+label:before{height:15px;-webkit-transition:opacity .1s ease-out;transition:opacity .1s ease-out}.menu__consumerist-sandwich+label:after{height:30px;-webkit-transition:-webkit-transform .2s ease-out;transition:-webkit-transform .2s ease-out;transition:transform .2s ease-out;transition:transform .2s ease-out,-webkit-transform .2s ease-out;-webkit-transform-origin:bottom right;transform-origin:bottom right}.menu__consumerist-sandwich:checked+label{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.menu__consumerist-sandwich:checked+label:before{opacity:0}.menu__consumerist-sandwich:checked+label:after{-webkit-transform:rotate(90deg) translate(-50%,50%);transform:rotate(90deg) translate(-50%,50%)}.menu__consumerist-sandwich:not(:checked)~.menu__links{opacity:0;pointer-events:none}.menu__links{-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#f2f2f2;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;-ms-flex-pack:distribute;justify-content:space-around;position:fixed;text-transform:uppercase;top:0;-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out}.menu__links,.menu__links:before{background-color:#020202;left:0;width:100%}.menu__links:before{content:\"\";height:50%;position:absolute;top:50%;z-index:-1}@media screen and (min-width:48rem){header{text-align:center}}.hero{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:distribute;justify-content:space-around;height:100vh;text-align:center}.hero__title{font-size:5rem;letter-spacing:.1em;margin:1rem 0 0}.hero__subtitle{display:block;font-size:.5em;letter-spacing:.3em}.tldr{color:#777;height:5rem;max-width:calc(80% - 2rem);position:relative;-webkit-transition:color .15s ease-out .15s;transition:color .15s ease-out .15s}.tldr:after,.tldr:before{border:1px solid #d75a4a;content:\"\";height:5rem;position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:1rem}.tldr:before{border-right:0;right:calc(100% + 1rem);-webkit-transition:right .15s ease-in-out;transition:right .15s ease-in-out}.tldr:after{border-left:0;left:calc(100% + 1rem);-webkit-transition:left .15s ease-in-out;transition:left .15s ease-in-out}.tldr.hidden{color:transparent;-webkit-transition:color .15s ease-out;transition:color .15s ease-out}.tldr.hidden:before{right:calc(50% + 1rem);-webkit-transition:right .15s ease-in-out .15s;transition:right .15s ease-in-out .15s}.tldr.hidden:after{left:calc(50% + 1rem);-webkit-transition:left .15s ease-in-out .15s;transition:left .15s ease-in-out .15s}.tldr__content{position:relative;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.column+.column{margin-top:1rem}.column__title{margin-bottom:.5rem}@media screen and (min-width:48rem){.columns{display:-webkit-box;display:-ms-flexbox;display:flex}.column{-webkit-box-flex:1;-ms-flex:1 0 33.33333%;flex:1 0 33.33333%;padding:0 .5rem}.column+.column{margin-top:0}.column:first-of-type{padding-left:0}.column:last-of-type{padding-right:0}}.works__item+.works__item{margin-top:1rem}.company__container{background-color:#f2f2f2;border-radius:1rem;padding:1rem}.company__logo{max-width:100%;display:block;margin:0 auto 1rem;max-height:4rem}.company__caption:before{content:\"\\1F517\";margin-right:1rem}@media screen and (min-width:48rem){.works{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.works__item{-webkit-box-flex:1;-ms-flex:1 0 50%;flex:1 0 50%}.works__item+.works__item{margin:0}.company__container{border:2px solid #020202;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:13rem;padding:2rem}.company__caption,.company__container{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}.company__caption{-webkit-box-flex:1;-ms-flex:1 0 auto;flex:1 0 auto}}@media screen and (min-width:64rem){.company__container{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;overflow:hidden;position:relative;z-index:0}.company__container:hover .company__caption{opacity:1;pointer-events:none}.company__logo{margin-bottom:0}.company__caption{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#d75a4a;color:#f2f2f2;display:-webkit-box;display:-ms-flexbox;display:flex;font-weight:700;height:100%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;left:0;opacity:0;padding:2rem;pointer-events:none;position:absolute;text-align:center;-webkit-transition:opacity .25s ease-out;transition:opacity .25s ease-out;top:0;width:100%;z-index:1}.company__caption:before{content:none}}footer{font-size:.8rem;padding:1rem;text-align:center}", ""]);
 
 // exports
 
@@ -748,9 +748,11 @@ exports.push([module.i, "@charset \"UTF-8\";\n/* \r\nhttp://meyerweb.com/eric/to
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const styles = __webpack_require__(8);
-const messages = __webpack_require__(12);
-const anchors = __webpack_require__(13);
+var styles = __webpack_require__(8);
+
+var messages = __webpack_require__(12);
+
+var anchors = __webpack_require__(13);
 
 /***/ }),
 /* 8 */
@@ -1324,27 +1326,30 @@ module.exports = function (css) {
 /***/ (function(module, exports) {
 
 (function tldr() {
-	const catchphrases = ['If you like unicorns, we can be friends.', 'Dark theme. Always.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'You will here me singing, badly.', 'Black coffee. Black metal. Black... website ?', 'I need you to scroll down now.', 'Please...', 'No really, you would do me a great favor.', 'I\'m out.'];
-	const tldr = document.querySelector('.tldr'),
-	      elem = tldr.querySelector('.tldr__content');
+  var catchphrases = ['If you like unicorns, we can be friends.', 'Dark theme. Always.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'You will here me singing, badly.', 'Black coffee. Black metal. Black... website ?', 'I need you to scroll down now.', 'Please...', 'No really, you would do me a great favor.', 'I\'m out.'];
+  var tldr = document.querySelector('.tldr'),
+      elem = tldr.querySelector('.tldr__content');
 
-	const _changeCatchphrase = () => {
-		tldr.classList.add('hidden');
-		setTimeout(function () {
-			elem.innerHTML = catchphrases.splice(0, 1);
-		}, 250);
-		setTimeout(function () {
-			tldr.classList.remove('hidden');
-		}, 500);
-	};
+  var _changeCatchphrase = function _changeCatchphrase() {
+    tldr.classList.add('hidden');
+    setTimeout(function () {
+      elem.innerHTML = catchphrases.splice(0, 1);
+    }, 250);
+    setTimeout(function () {
+      tldr.classList.remove('hidden');
+    }, 500);
+  }; // Change catchphrase every 4s
 
-	// Change catchphrase every 4s
-	const intrvl = setInterval(() => {
-		_changeCatchphrase();
-		if (!catchphrases.length) {
-			clearInterval(intrvl);
-		};
-	}, 4000);
+
+  var intrvl = setInterval(function () {
+    _changeCatchphrase();
+
+    if (!catchphrases.length) {
+      clearInterval(intrvl);
+    }
+
+    ;
+  }, 4000);
 })();
 
 /***/ }),
@@ -1352,26 +1357,27 @@ module.exports = function (css) {
 /***/ (function(module, exports) {
 
 (function scrollTo() {
-	const anchors = document.querySelectorAll('.link[href^="#"]');
+  var anchors = document.querySelectorAll('.link[href^="#"]');
 
-	for (let i = 0; i < anchors.length; i++) {
-		anchors[i].addEventListener('click', e => {
-			e.preventDefault();
-			const to = document.getElementById(anchors[i].href.split("#")[1]),
-			      toY = to.getBoundingClientRect().top + window.scrollY,
-			      currentAnchor = document.querySelector('.anchor.active');
+  var _loop = function _loop(i) {
+    anchors[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      var to = document.getElementById(anchors[i].href.split("#")[1]),
+          toY = to.getBoundingClientRect().top + window.scrollY,
+          currentAnchor = document.querySelector('.anchor.active');
+      if (currentAnchor) currentAnchor.classList.remove('active');
+      window.scrollTo(0, // x
+      toY - 50 // keep a bit of space on top for easier reading
+      ); //toggle quickly in succession to trigger the color transition
 
-			if (currentAnchor) currentAnchor.classList.remove('active');
+      document.getElementById('trigger').checked = false;
+      to.classList.add('active');
+    });
+  };
 
-			window.scrollTo(0, // x
-			toY - 50 // keep a bit of space on top for easier reading
-			);
-
-			//toggle quickly in succession to trigger the color transition
-			document.getElementById('trigger').checked = false;
-			to.classList.add('active');
-		});
-	}
+  for (var i = 0; i < anchors.length; i++) {
+    _loop(i);
+  }
 })();
 
 /***/ })
