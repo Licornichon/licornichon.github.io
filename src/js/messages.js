@@ -3,7 +3,7 @@
 		'If you like unicorns, we can be friends.',
 		'Dark theme. Always.',
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		'You will here me singing, badly.',
+		'You will hear me singing, badly.',
 		'Black coffee. Black metal. Black... website ?',
 		'I need you to scroll down now.',
 		'No really, you would do me a great favor.',
