@@ -1,23 +1,28 @@
-(function scrollTo() {
-	const anchors = document.querySelectorAll('.link[href^="#"]');
-	
-	for(let i = 0; i < anchors.length; i++) {
-		anchors[i].addEventListener('click', (e) => {
-			e.preventDefault();
-			const to = document.getElementById(anchors[i].href.split("#")[1]),
-				toY = to.getBoundingClientRect().top + window.scrollY,
-				currentAnchor = document.querySelector('.anchor.active');
-			
-			if(currentAnchor) currentAnchor.classList.remove('active');
+(function () {
+  // Smooth scroll
+  const links = document.querySelectorAll('.nav__link[href^="#"]')
 
-			window.scrollTo(
-				0, // x
-				toY	- 50 // keep a bit of space on top for easier reading
-			);
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      const id = link.getAttribute('href').slice(1)
+      const target = document.getElementById(id)
+      if (!target) return
 
-			//toggle quickly in succession to trigger the color transition
-			document.getElementById('trigger').checked = false;
-			to.classList.add('active');
-		});
-	}
-})();
+      const navLinks = document.querySelector('.nav__links')
+      if (navLinks) navLinks.classList.remove('is-open')
+
+      window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY - 70)
+    })
+  })
+
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav__toggle')
+  const navLinks = document.querySelector('.nav__links')
+
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('is-open')
+    })
+  }
+})()

@@ -1,27 +1,48 @@
-// Breakpoints
-$m: 48rem;
-$l: 64rem;
-$xl: 90rem;
-$uxl: 120rem;
+// ─── Couleurs ───────────────────────────────────────────────────────────────
+$color-bg:           #0f0f0f;
+$color-bg-lighter:      #1a1a1a;
+$color-accent:       #f4edd1;
+$color-accent-hover: #faf6e8;
+$color-text:         #e8e8e8;
+$color-text-muted:   #888888;
+$color-border:       #2a2a2a;
 
-// Typography
-$fontSize: 18px; // TODO: Set to fluid
-$h2: 2rem;
-$h3: 1.5rem;
-$small: .8rem;
-// Base Line Height
-$blh: 1.4em;
+// ─── Typographie ─────────────────────────────────────────────────────────────
+$font-sans:   system-ui, -apple-system, sans-serif;
+$font-brand:  'Crusades', 'Georgia', serif; // brand name "Fool's Cauldron"
+$line-height: 1.75;
 
-// Fonts 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:700');
-$fontTitle: 'Oswald', Impact, 'Franklin Gothic Bold', sans-serif;
-$fontText: 'Open Sans', Tahoma, sans-serif;
+// ─── Mise en page ────────────────────────────────────────────────────────────
+$container-max:   1200px;
+$section-padding: 6rem 2rem;
 
-// Mixins
+// ─── Breakpoints ─────────────────────────────────────────────────────────────
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
 
-// Media queries
-@mixin media($width) {
-	@media screen and (min-width: $width) {
-		@content;
-	}
+// ─── Mixins ──────────────────────────────────────────────────────────────────
+@mixin container {
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin title-section {
+  font-family: $font-sans;
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  color: $color-accent;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@mixin title-subsection {
+  font-family: $font-sans;
+  font-size: clamp(1.25rem, 4vw, 1.875rem);
+  color: $color-accent;
+  margin-bottom: 1.5rem;
+}
+
+@mixin text-muted {
+  color: $color-text-muted;
 }

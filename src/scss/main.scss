@@ -1,12 +1,17 @@
-@import "_reset";
+@use 'fonts';
+@use 'variables';
+@use 'reset';
+@use 'global';
+@use 'loader';
 
-@import "_variables";
-@import "_colors";
-@import "_global";
-
-@import "_header";
-@import "_hero";
-@import "_columns";
-@import "_works";
-//@import "_contact";
-@import "_footer";
+@use 'nav';
+@use 'hero';
+@use 'about';
+@use 'services';
+@use 'pricing';
+@use 'gallery';
+@use 'contact';
+@use 'faq';
+@use 'instagram';
+@use 'footer';
+@use 'privacy';

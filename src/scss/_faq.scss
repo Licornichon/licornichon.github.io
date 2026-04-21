@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+.faq {
+  padding: $section-padding;
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    @include title-section;
+  }
+
+  &__subtitle {
+    @include text-muted;
+    text-align: center;
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    @include container;
+  }
+
+  &__item {
+    padding: 2rem 0;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__question {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: $color-accent;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  &__answer {
+    @include text-muted;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+}
