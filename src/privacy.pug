@@ -1,0 +1,58 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='robots', content='noindex')
+    title Politique de confidentialité — Fool's Cauldron
+    link(rel='icon' type='image/x-icon' href='./assets/media/favicon/favicon.ico')
+    link(rel='icon' type='image/svg+xml' href='./assets/media/favicon/favicon.svg')
+    link(rel='icon' type='image/png' sizes='96x96' href='./assets/media/favicon/favicon-96x96.png')
+    link(rel='apple-touch-icon' href='./assets/media/favicon/apple-touch-icon.png')
+    link(rel='manifest' href='./assets/media/favicon/site.webmanifest')
+  body
+
+    nav.nav
+      a.nav__logo(href='./')
+        span.brand-name Fool's Cauldron
+      .nav__lang
+        button.nav__lang-btn(data-lang='fr') FR
+        span.nav__lang-sep |
+        button.nav__lang-btn(data-lang='en') EN
+
+    main.privacy-page
+      .privacy-page__inner
+        section.privacy-page__section
+          h1.privacy-page__title(data-i18n='privacy.title') Politique de confidentialité
+          p.privacy-page__intro(data-i18n='privacy.intro')
+
+        section.privacy-page__section
+          h2(data-i18n='privacy.s1.title') Données collectées
+          div(data-i18n-html='privacy.s1.content')
+
+        section.privacy-page__section
+          h2(data-i18n='privacy.s2.title') Services tiers
+          div(data-i18n-html='privacy.s2.content')
+
+        section.privacy-page__section
+          h2(data-i18n='privacy.s3.title') Cookies et stockage
+          div(data-i18n-html='privacy.s3.content')
+
+        section.privacy-page__section
+          h2(data-i18n='privacy.s4.title') Utilisation des données
+          div(data-i18n-html='privacy.s4.content')
+
+        section.privacy-page__section
+          h2(data-i18n='privacy.s5.title') Vos droits
+          div(data-i18n-html='privacy.s5.content')
+
+        section.privacy-page__section
+          h2(data-i18n='privacy.contact.title') Contact
+          div(data-i18n-html='privacy.contact.content')
+
+        a.privacy-page__back(href='./' data-i18n='privacy.back') ← Retour
+
+    footer.footer
+      p
+        span(data-i18n='footer.copyright') © 2026
+        span Fool's Cauldron

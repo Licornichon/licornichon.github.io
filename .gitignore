@@ -1,3 +1,15 @@
+# OS
 .DS_Store
+
+# Dependencies
 node_modules/
+
+# Build artifacts
 dist/
+index.js
+index.html
+bundle.js
+
+# Claude Code
+.claude/
+memory/
