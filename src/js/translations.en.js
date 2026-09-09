@@ -62,7 +62,7 @@ module.exports = {
   'shop.meta.title':       "Shop — Atelier Guillotine | Painted miniatures for sale",
   'shop.meta.description': "Painted miniatures currently for sale by Atelier Guillotine — display and tabletop pieces for Warhammer and other tabletop games.",
   'shop.hero.title':    'Shop',
-  'shop.hero.subtitle': 'Painted miniatures currently for sale.',
+  'shop.hero.subtitle': 'Painted miniatures looking for a new home.',
   'shop.title':         'Currently for sale',
   'shop.empty':         'No pieces for sale right now — check back soon.',
   'shop.status.available': 'Available',

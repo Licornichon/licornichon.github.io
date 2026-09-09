@@ -62,7 +62,7 @@ module.exports = {
   'shop.meta.title':       "Boutique — Atelier Guillotine | Figurines peintes à vendre",
   'shop.meta.description': "Figurines peintes actuellement en vente chez Atelier Guillotine — pièces d’exposition et niveau jeu pour Warhammer et autres jeux de figurines.",
   'shop.hero.title':    'Boutique',
-  'shop.hero.subtitle': 'Figurines peintes actuellement en vente.',
+  'shop.hero.subtitle': 'Figurines peintes en quête d’un nouveau foyer.',
   'shop.title':         'Actuellement en vente',
   'shop.empty':         'Aucune pièce en vente pour le moment — revenez bientôt.',
   'shop.status.available': 'Disponible',
