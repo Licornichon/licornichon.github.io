@@ -1,7 +1,13 @@
 name: Build & Deploy
 
+# Builds on every push (catches errors on working branches);
+# deploys over FTP to the OVH hosting from master only.
+#
+# Required secrets: OVH_FTP_SERVER, OVH_FTP_USERNAME, OVH_FTP_PASSWORD
+
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -27,23 +33,18 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy to OVH
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          path: dist
-
-      - uses: actions/deploy-pages@v4
-        id: deployment
+          server: ${{ secrets.OVH_FTP_SERVER }}
+          username: ${{ secrets.OVH_FTP_USERNAME }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ./www/

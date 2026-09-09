@@ -4,17 +4,19 @@ html(lang='fr')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='robots', content='noindex, nofollow')
-    title Fool's Cauldron — Bientôt disponible
+    title Atelier Guillotine — Bientôt disponible
     link(rel='icon' type='image/x-icon' href='./assets/media/favicon/favicon.ico')
-    link(rel='icon' type='image/svg+xml' href='./assets/media/favicon/favicon.svg')
     link(rel='apple-touch-icon' href='./assets/media/favicon/apple-touch-icon.png')
+    //- Standalone page: CSS is inlined here, no external stylesheet and no JS.
+    //- The only build-time assets are the favicons and Crusades.woff2, copied
+    //- by CopyWebpackPlugin (see webpack.config.js).
     style.
       @font-face {
         font-family: 'Crusades';
-        src: url('./assets/fonts/Crusades.woff2') format('woff2'),
-             url('./assets/fonts/Crusades.ttf') format('truetype');
+        src: url('./assets/fonts/Crusades.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
       }
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       body {
@@ -44,7 +46,7 @@ html(lang='fr')
       }
   body
     div
-      span.brand Fool's Cauldron
+      span.brand Atelier
         br
-        | Miniatures
+        | Guillotine
       p.tagline Bientôt disponible
