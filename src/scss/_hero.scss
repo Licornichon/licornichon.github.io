@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+// Offsets the fixed nav height (homepage only)
+#hero {
+  margin-top: 4.5rem;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__bg-left {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__bg-right {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    height: 80%;
+    object-fit: contain;
+  }
+
+    &__content {
+    position: relative;
+    z-index: 1;
+    padding: 0 2rem;
+  }
+
+  &__title {
+    color: $color-accent;
+    font-family: $font-sans;
+    font-size: clamp(5rem, 16vw, 10rem);
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    color: $color-text-muted;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    max-width: 875px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

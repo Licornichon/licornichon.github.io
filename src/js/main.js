@@ -1,0 +1,7 @@
+require('../scss/main.scss')
+require('./lang.js')
+require('./loader.js')
+require('./anchors.js')
+require('./gallery.js')
+require('./lightbox.js')
+require('./form.js')

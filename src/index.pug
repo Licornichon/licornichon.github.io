@@ -1,52 +1,186 @@
 doctype html
-html(lang='fr')
+html(lang='fr' data-page='home')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='robots', content='noindex, nofollow')
-    title Atelier Guillotine — Bientôt disponible
-    link(rel='icon' type='image/x-icon' href='./assets/media/favicon/favicon.ico')
-    link(rel='apple-touch-icon' href='./assets/media/favicon/apple-touch-icon.png')
-    //- Standalone page: CSS is inlined here, no external stylesheet and no JS.
-    //- The only build-time assets are the favicons and Crusades.woff2, copied
-    //- by CopyWebpackPlugin (see webpack.config.js).
-    style.
-      @font-face {
-        font-family: 'Crusades';
-        src: url('./assets/fonts/Crusades.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      body {
-        min-height: 100dvh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0f0f0f;
-        color: #e8e8e8;
-        font-family: system-ui, -apple-system, sans-serif;
-        text-align: center;
-        padding: 2rem;
-      }
-      .brand {
-        font-family: 'Crusades', Georgia, serif;
-        font-size: clamp(3rem, 12vw, 7rem);
-        color: #f4edd1;
-        line-height: 1;
-        display: block;
-        margin-bottom: 2rem;
-      }
-      .tagline {
-        font-size: clamp(0.85rem, 2.5vw, 1rem);
-        color: #888;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-      }
+    meta(name='description' data-i18n-content='home.meta.description' content='Professional miniature painting commissions for Warhammer and tabletop games. Battle-ready armies, detailed finishes, and display pieces.')
+    title(data-i18n='home.meta.title') Atelier Guillotine | Miniature Painting Commission | Warhammer & Tabletop
+    link(rel='canonical' href=siteUrl + '/')
+    //- Open Graph — hardcoded French: scrapers (Discord, WhatsApp…) never run the i18n JS
+    meta(property='og:type' content='website')
+    meta(property='og:site_name' content='Atelier Guillotine')
+    meta(property='og:locale' content='fr_FR')
+    meta(property='og:url' content=siteUrl + '/')
+    meta(property='og:title' content='Atelier Guillotine | Peinture de figurines sur commande')
+    meta(property='og:description' content='Service professionnel de peinture de figurines pour Warhammer et jeux de figurines. Armées prêtes à jouer, finitions soignées et pièces d’exposition.')
+    meta(property='og:image' content=siteUrl + '/assets/media/og.jpg')
+    meta(property='og:image:width' content='1200')
+    meta(property='og:image:height' content='630')
+    meta(property='og:image:alt' content='Figurines peintes par Atelier Guillotine')
+    //- Favicons & PWA
+    link(rel='icon' type='image/png' sizes='16x16' href='./assets/media/favicon/favicon-16.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='./assets/media/favicon/favicon-32.png')
+    link(rel='icon' type='image/png' sizes='96x96' href='./assets/media/favicon/favicon-96.png')
+    link(rel='icon' type='image/png' sizes='192x192' href='./assets/media/favicon/favicon-192.png')
+    link(rel='apple-touch-icon' sizes='180x180' href='./assets/media/favicon/favicon-180.png')
+    link(rel='manifest' href='./assets/media/favicon/site.webmanifest')
   body
-    div
-      span.brand Atelier
-        br
-        | Guillotine
-      p.tagline Bientôt disponible
+
+    a.skip-link(href='#main-content') Aller au contenu
+
+    .page-loader
+      img.page-loader__logo(src='./assets/media/logo-transparent.png' alt='' width='360')
+
+    nav.nav(aria-label='Navigation principale')
+      a.nav__logo(href='#')
+        span.brand-name Atelier Guillotine
+      button.nav__toggle(data-i18n-aria='nav.toggle' aria-label='Ouvrir le menu') ☰
+      ul.nav__links
+        li: a.nav__link(href='#gallery' data-i18n='nav.gallery') Gallery
+        li: a.nav__link(href='#services' data-i18n='nav.services') Painting Services
+        li: a.nav__link(href='#pricing' data-i18n='nav.pricing') Pricing
+        li: a.nav__link(href='./shop.html' data-i18n='nav.shop') Shop
+        li: a.nav__link(href='#faq' data-i18n='nav.faq') FAQ
+        li: a.nav__link(href='#contact' data-i18n='nav.contact') Contact
+        li: a.nav__link(href='#about' data-i18n='nav.about') About
+      .nav__lang
+        button.nav__lang-btn(data-lang='fr' aria-pressed='true') FR
+        span.nav__lang-sep(aria-hidden='true') |
+        button.nav__lang-btn(data-lang='en' aria-pressed='false') EN
+
+    main#main-content
+
+      //- ──────────────────────────────────────────
+      //- HERO
+      //- ──────────────────────────────────────────
+      section#hero.hero
+        img.hero__bg-left(src='./assets/media/hero-chasseur-sorciere.png' alt='Atelier Guillotine — Miniature painting - Witch Hunter' data-i18n-alt='hero.imageAlt')
+        img.hero__bg-right(src='./assets/media/hero-pirate.png' alt='Atelier Guillotine — Miniature painting - Pirate' data-i18n-alt='hero.imageAlt')
+        .hero__content
+          h1.hero__title
+            span.brand-name(data-i18n-html='hero.title') Atelier<br>Guillotine
+          p.hero__subtitle(data-i18n-html='hero.subtitle')
+
+      //- ──────────────────────────────────────────
+      //- GALLERY
+      //- Images scanned at build time from assets/media/{battle-ready,tabletop-plus,display}/
+      //- To add images: drop them in the folder, then run npm run dev or npm run build
+      //- ──────────────────────────────────────────
+      section#gallery.gallery
+        h2.gallery__title(data-i18n='gallery.title') Gallery
+        .gallery__filters(role='group' aria-label='Filtrer par niveau')
+          button.gallery__filter.is-active(data-filter='all' data-i18n='gallery.all' aria-pressed='true') All
+          button.gallery__filter(data-filter='battle-ready' data-i18n='gallery.tr' aria-pressed='false') Battle Ready
+          button.gallery__filter(data-filter='tabletop-plus' data-i18n='gallery.ttp' aria-pressed='false') Tabletop+
+          button.gallery__filter(data-filter='display' data-i18n='gallery.display' aria-pressed='false') Display
+        .gallery__grid
+          .gallery__sizer
+          if galleryItems && galleryItems.length
+            each item in galleryItems
+              a.gallery__item(
+                href=item.src
+                data-gallery='gallery'
+                data-level=item.level
+              )
+                img(src=item.src alt=item.name loading='lazy')
+
+      //- ──────────────────────────────────────────
+      //- SERVICES
+      //- ──────────────────────────────────────────
+      section#services.services
+        h2.services__title(data-i18n='services.title') Painting Services
+        .services__grid
+
+          .service
+            .service__badge(data-i18n='services.tr.name') Battle Ready
+            .service__price(data-i18n='services.tr.price') from 10 € per miniature
+            p.service__description(data-i18n='services.tr.desc') Get your miniatures battle-ready, fast.
+            ul.service__features
+              li(data-i18n='services.tr.f1') Zenithal undercoat
+              li(data-i18n='services.tr.f2') Single Contrast paint pass
+              li(data-i18n='services.tr.f3') Textured paste basing
+            a.service__cta(href='#contact' data-i18n='services.tr.cta') An Army ready to play
+
+          .service.service--bestseller
+            .service__badge(data-i18n='services.ttp.name') Tabletop+
+            .service__price(data-i18n='services.ttp.price') from 27 € per miniature
+            p.service__description(data-i18n='services.ttp.desc') Enhanced detail and striking results.
+            ul.service__features
+              li(data-i18n='services.ttp.f1') Enhanced highlights and gradients
+              li(data-i18n='services.ttp.f2') Extra details and finishes
+              li(data-i18n='services.ttp.f3') Texture and pigment basing
+            a.service__cta(href='#contact' data-i18n='services.ttp.cta') Take your army to the next level
+
+          .service.service--featured
+            .service__badge(data-i18n='services.display.name') Display
+            .service__price(data-i18n='services.display.price') quote on request
+            p.service__description(data-i18n='services.display.desc') The highest level of artistic quality.
+            ul.service__features
+              li(data-i18n='services.display.f1') Advanced techniques and blends
+              li(data-i18n='services.display.f2') Exceptional detail level
+              li(data-i18n='services.display.f3') Custom basing and finishes
+            a.service__cta(href='#contact' data-i18n='services.display.cta') Commission a showcase piece
+
+      //- ──────────────────────────────────────────
+      //- PRICING
+      //- ──────────────────────────────────────────
+      section#pricing.pricing
+        h2.pricing__title(data-i18n='pricing.title') Pricing
+
+        .pricing__section.pricing__section--notice
+          h3.pricing__subtitle(data-i18n='pricing.howWorks.title') How pricing works
+          p(data-i18n='pricing.howWorks.desc1') Pricing depends on miniature size, complexity, and finish level.
+          p(data-i18n='pricing.howWorks.desc2') Most commissions fall within the ranges below.
+          p(data-i18n='pricing.howWorks.display') Display pieces are quoted individually for optimal quality.
+
+        .pricing__section
+          h3.pricing__subtitle(data-i18n='pricing.typicalRanges.title') Typical ranges
+          .pricing__table-wrapper
+            table.pricing__table
+              thead
+                tr
+                  th(scope='col' data-i18n='pricing.typicalRanges.col.type') Type
+                  th(scope='col' data-i18n='pricing.tr.name') Battle Ready
+                  th(scope='col' data-i18n='pricing.ttp.name') Tabletop+
+              tbody
+                tr
+                  td(data-i18n='pricing.infantry') Infantry
+                  td(data-i18n-label='pricing.tr.name') 17+ €
+                  td(data-i18n-label='pricing.ttp.name') 34+ €
+                tr
+                  td(data-i18n='pricing.typicalRanges.elite') Elite Infantry
+                  td(data-i18n-label='pricing.tr.name') 22+ €
+                  td(data-i18n-label='pricing.ttp.name') 44+ €
+                tr
+                  td(data-i18n='pricing.typicalRanges.cavalry') Cavalry
+                  td(data-i18n-label='pricing.tr.name') 30+ €
+                  td(data-i18n-label='pricing.ttp.name') 50+ €
+                tr
+                  td(data-i18n='pricing.typicalRanges.vehicles') Vehicles
+                  td(data-i18n-label='pricing.tr.name') 40+ €
+                  td(data-i18n-label='pricing.ttp.name') 80+ €
+                tr
+                  td(data-i18n='pricing.character') Characters
+                  td(data-i18n-label='pricing.tr.name') 40+ €
+                  td(data-i18n-label='pricing.ttp.name') 100+ €
+                tr
+                  td(data-i18n-html='pricing.largeCharacter') Large Character
+                  td(data-i18n-label='pricing.tr.name') 85+ €
+                  td(data-i18n-label='pricing.ttp.name') 200+ €
+      //- ──────────────────────────────────────────
+      //- FAQ / CONTACT / ABOUT — shared with shop.pug, see src/includes/
+      //- ──────────────────────────────────────────
+      include includes/_faq
+
+      include includes/_contact
+
+      include includes/_about
+
+    footer.footer
+      span
+        span(data-i18n='footer.copyright') © 2026
+        span &nbsp;
+        span.brand-name Atelier Guillotine
+      //- TODO — link hidden while legal.html is not generated (see webpack.config.js).
+      //- Restore it together with the page.
+      //- a.footer__link(href='./legal.html' data-i18n='footer.legal') Mentions légales

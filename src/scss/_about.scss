@@ -1,0 +1,75 @@
+@use 'variables' as *;
+
+.about {
+  padding: $section-padding;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: clamp(1.75rem, 6vw, 3rem);
+    color: $color-accent;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    @include text-muted;
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  &__subtitle {
+    @include title-subsection;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__benefit {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $color-accent;
+      margin-bottom: 0.5rem;
+    }
+
+    &-text {
+      @include text-muted;
+      line-height: 1.75;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  }
+}
