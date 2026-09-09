@@ -1,23 +1,21 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const fs = require('fs')
 const os = require('os')
 
 const src = path.join(__dirname, 'src')
-const galleryDataPath = path.join(__dirname, 'src/data/gallery.json')
 
-// Fonction pour charger les données (appelée à chaque compilation)
-function loadGalleryItems () {
-  if (fs.existsSync(galleryDataPath)) {
-    return JSON.parse(fs.readFileSync(galleryDataPath, 'utf8'))
-  }
-  return []
-}
+// ⚠️ COMING-SOON BRANCH — deliberately stripped down.
+// src/index.pug is the only page, and it is self-contained: inline CSS, no JS,
+// no stylesheet. Everything the full site needs (src/scss, src/js modules,
+// scripts/, loaders/, the other pages and the rest of assets/media) has been
+// removed from this branch and comes back when the complete branch is merged.
+// Only the SCSS/CSS/asset loader rules and copy patterns still needed by this
+// single page remain below.
 
 module.exports = {
   entry: {
-    bundle: path.join(src, 'js/main.js'),
+    bundle: path.join(src, 'js/coming-soon.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -64,50 +62,25 @@ module.exports = {
             loader: '@webdiscus/pug-loader',
             options: { pretty: true },
           },
-          {
-            loader: path.resolve(__dirname, 'loaders/pug-with-gallery.js'),
-          },
         ],
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(jpg|jpeg|png|gif|svg|webp)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/media/[name][ext]',
-        },
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/fonts/[name][ext]',
-        },
       },
     ],
   },
   plugins: [
+    // Only what src/index.pug references — copying all of assets/media would
+    // ship ~8 MB of gallery photos that this page never displays.
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.join(__dirname, 'assets/media'), to: 'assets/media', noErrorOnMissing: true },
-        { from: path.join(src, 'CNAME'), to: 'CNAME', toType: 'file' },
+        { from: path.join(__dirname, 'assets/media/favicon/favicon.ico'), to: 'assets/media/favicon/favicon.ico' },
+        { from: path.join(__dirname, 'assets/media/favicon/apple-touch-icon.png'), to: 'assets/media/favicon/apple-touch-icon.png' },
+        { from: path.join(src, 'fonts/Crusades.woff2'), to: 'assets/fonts/Crusades.woff2' },
       ],
     }),
+    // inject: false — the page needs no stylesheet or script tag.
     new HtmlWebpackPlugin({
       template: path.join(src, 'index.pug'),
       filename: 'index.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.join(src, 'privacy.pug'),
-      filename: 'privacy.html',
+      inject: false,
     }),
   ],
 }
