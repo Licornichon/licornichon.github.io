@@ -20,6 +20,12 @@ module.exports = {
     port: 8080,
     hot: true,
     open: true,
+    // Parité avec le .htaccess de prod : /shop sert shop.html en local aussi.
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/(.+?)\/?$/, to: (ctx) => '/' + ctx.match[1] + '.html' },
+      ],
+    },
     onListening: (devServer) => {
       const port = devServer.server.address().port
       console.log('\n  ➜  Local:   http://localhost:' + port + '/')

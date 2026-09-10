@@ -101,7 +101,7 @@ module.exports = {
   'contact.sent':               'Message sent',
   'contact.success':            "Message sent! I'll get back to you as soon as possible.",
   'contact.error':              "An error occurred. Please try again or contact me directly.",
-  'contact.privacyNotice':      "Your data (name, email, message) is used solely to answer your enquiry and is never shared. Details in the <a href=\"./legal.html#personal-data\">legal notice</a>.",
+  'contact.privacyNotice':      "Your data (name, email, message) is used solely to answer your enquiry and is never shared. Details in the <a href=\"./legal#personal-data\">legal notice</a>.",
 
   'faq.title': 'FAQ',
   'faq.subtitle': 'Everything you need to know before commissioning your army',

@@ -5,12 +5,12 @@ html(lang='fr' data-page='shop')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description' data-i18n-content='shop.meta.description' content='Painted miniatures currently for sale by Atelier Guillotine — display and tabletop pieces for Warhammer and other tabletop games.')
     title(data-i18n='shop.meta.title') Shop — Atelier Guillotine | Painted miniatures for sale
-    link(rel='canonical' href=siteUrl + '/shop.html')
+    link(rel='canonical' href=siteUrl + '/shop')
     //- Open Graph — hardcoded French: scrapers never run the i18n JS
     meta(property='og:type' content='website')
     meta(property='og:site_name' content='Atelier Guillotine')
     meta(property='og:locale' content='fr_FR')
-    meta(property='og:url' content=siteUrl + '/shop.html')
+    meta(property='og:url' content=siteUrl + '/shop')
     meta(property='og:title' content='Boutique — Atelier Guillotine | Figurines peintes à vendre')
     meta(property='og:description' content='Figurines peintes actuellement en vente — pièces d’exposition et niveau jeu pour Warhammer et autres jeux de figurines.')
     meta(property='og:image' content=siteUrl + '/assets/media/og.jpg')
@@ -39,7 +39,7 @@ html(lang='fr' data-page='shop')
         li: a.nav__link(href='./#gallery' data-i18n='nav.gallery') Gallery
         li: a.nav__link(href='./#services' data-i18n='nav.services') Painting Services
         li: a.nav__link(href='./#pricing' data-i18n='nav.pricing') Pricing
-        li: a.nav__link.is-active(href='./shop.html' data-i18n='nav.shop' aria-current='page') Shop
+        li: a.nav__link.is-active(href='./shop' data-i18n='nav.shop' aria-current='page') Shop
         li: a.nav__link(href='#faq' data-i18n='nav.faq') FAQ
         li: a.nav__link(href='#contact' data-i18n='nav.contact') Contact
         li: a.nav__link(href='#about' data-i18n='nav.about') About
@@ -114,4 +114,4 @@ html(lang='fr' data-page='shop')
         span.brand-name Atelier Guillotine
       //- TODO — link hidden while legal.html is not generated (see webpack.config.js).
       //- Restore it together with the page.
-      //- a.footer__link(href='./legal.html' data-i18n='footer.legal') Mentions légales
+      //- a.footer__link(href='./legal' data-i18n='footer.legal') Mentions légales

@@ -101,7 +101,7 @@ module.exports = {
   'contact.sent':               'Message envoyé',
   'contact.success':            "Message envoyé ! Je vous répondrai dès que possible.",
   'contact.error':              "Une erreur est survenue. Veuillez réessayer ou me contacter directement.",
-  'contact.privacyNotice':      "Vos données (nom, email, message) servent uniquement à répondre à votre demande et ne sont jamais cédées. Détails dans les <a href=\"./legal.html#personal-data\">mentions légales</a>.",
+  'contact.privacyNotice':      "Vos données (nom, email, message) servent uniquement à répondre à votre demande et ne sont jamais cédées. Détails dans les <a href=\"./legal#personal-data\">mentions légales</a>.",
 
   'faq.title': 'FAQ',
   'faq.subtitle': 'Tout ce qu’il faut savoir avant de lancer votre projet',
