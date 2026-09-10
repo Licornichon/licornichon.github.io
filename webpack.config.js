@@ -5,17 +5,9 @@ const os = require('os')
 
 const src = path.join(__dirname, 'src')
 
-// ⚠️ COMING-SOON BRANCH — deliberately stripped down.
-// src/index.pug is the only page, and it is self-contained: inline CSS, no JS,
-// no stylesheet. Everything the full site needs (src/scss, src/js modules,
-// scripts/, loaders/, the other pages and the rest of assets/media) has been
-// removed from this branch and comes back when the complete branch is merged.
-// Only the SCSS/CSS/asset loader rules and copy patterns still needed by this
-// single page remain below.
-
 module.exports = {
   entry: {
-    bundle: path.join(src, 'js/coming-soon.js'),
+    bundle: path.join(src, 'js/main.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -28,6 +20,12 @@ module.exports = {
     port: 8080,
     hot: true,
     open: true,
+    // Parité avec le .htaccess de prod : /shop sert shop.html en local aussi.
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/(.+?)\/?$/, to: (ctx) => '/' + ctx.match[1] + '.html' },
+      ],
+    },
     onListening: (devServer) => {
       const port = devServer.server.address().port
       console.log('\n  ➜  Local:   http://localhost:' + port + '/')
@@ -62,25 +60,61 @@ module.exports = {
             loader: '@webdiscus/pug-loader',
             options: { pretty: true },
           },
+          {
+            loader: path.resolve(__dirname, 'loaders/pug-with-data.js'),
+          },
         ],
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif|svg|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/media/[name][ext]',
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
       },
     ],
   },
   plugins: [
-    // Only what src/index.pug references — copying all of assets/media would
-    // ship ~8 MB of gallery photos that this page never displays.
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.join(__dirname, 'assets/media/favicon/favicon.ico'), to: 'assets/media/favicon/favicon.ico' },
-        { from: path.join(__dirname, 'assets/media/favicon/apple-touch-icon.png'), to: 'assets/media/favicon/apple-touch-icon.png' },
-        { from: path.join(src, 'fonts/Crusades.woff2'), to: 'assets/fonts/Crusades.woff2' },
+        { from: path.join(__dirname, 'assets/media'), to: 'assets/media', noErrorOnMissing: true },
+        // robots.txt + sitemap.xml → dist/ root
+        { from: path.join(src, 'static'), to: '.', noErrorOnMissing: true },
       ],
     }),
-    // inject: false — the page needs no stylesheet or script tag.
     new HtmlWebpackPlugin({
       template: path.join(src, 'index.pug'),
       filename: 'index.html',
-      inject: false,
     }),
+    new HtmlWebpackPlugin({
+      template: path.join(src, 'shop.pug'),
+      filename: 'shop.html',
+    }),
+    // TODO — Legal notice / privacy page is deliberately not generated for now
+    // (incomplete content: NOM_PRENOM / NUMEROSIRET / MEDIATEUR_NOM… placeholders
+    // are not filled in yet). The src/legal.pug template is kept.
+    // To bring it back: uncomment below, then restore the footer link
+    // (index.pug + shop.pug) and the GDPR notice in the contact form
+    // (src/includes/_contact.pug). Legal requirement — do this before going public.
+    // new HtmlWebpackPlugin({
+    //   template: path.join(src, 'legal.pug'),
+    //   filename: 'legal.html',
+    // }),
   ],
 }

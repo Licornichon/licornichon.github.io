@@ -1,6 +1,6 @@
-# Fool's Cauldron — licornichon.github.io
+# Atelier Guillotine — licornichon.github.io
 
-Site portfolio mono-page pour **Fool's Cauldron**, peinture de figurines sur commande. Portfolio professionnel avec galerie dynamique, tarifs et formulaire de contact.
+Site portfolio mono-page pour **Atelier Guillotine**, peinture de figurines sur commande. Portfolio professionnel avec galerie dynamique, tarifs et formulaire de contact.
 
 ## Développement local
 
@@ -107,12 +107,12 @@ src/data/gallery.json          → Généré au build
 ## SEO
 
 **Métadonnées optimisées** :
-- Title : "Fool's Cauldron - Peinture de Figurines Professionnelle | Toutes Marques"
+- Title : "Atelier Guillotine - Peinture de Figurines Professionnelle | Toutes Marques"
 - Description : 160 chars avec keywords (professionnel, 15 ans, récompenses, toutes marques)
 - Favicon : 3 formats pour compatibilité
 
 **Trust factors** :
-- Section "Pourquoi choisir Fool's Cauldron" avec 4 points forts
+- Section "Pourquoi choisir Atelier Guillotine" avec 4 points forts
 - FAQ 6 questions (pour long-tail keywords)
 
 ## Commandes npm
@@ -163,7 +163,7 @@ Pour configurer :
 **v2.0 - Rebuild complet**
 - Webpack 3 → Webpack 5 ✅
 - Pug 2 → Pug 3 ✅
-- Ancien contenu → Portfolio Fool's Cauldron ✅
+- Ancien contenu → Portfolio Atelier Guillotine ✅
 - Ajout traductions i18n ✅
 - Ajout galerie dynamique ✅
 - Ajout SEO optimisé ✅
